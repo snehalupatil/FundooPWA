@@ -1,27 +1,60 @@
-<div class="Body">
-  <div class="Form">
-    <h2>Create your Account</h2>
-    <div class="flex1">
-      <div class="row-content1">
-        <input class="input" type="text" placeholder="  First Name" />
+<div class="container">
+  <div class="container__left">
+    <h2><span class="logo fundoo">Fundoo Notes</span></h2>
+
+    <h1>Create your Fundoo Account</h1>
+    <form class="container__form">
+      <div class="form__first-row">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label></mat-label>
+            <input matInput placeholder="First Name" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label></mat-label>
+            <input matInput placeholder="Last Name" />
+          </mat-form-field>
+        </p>
       </div>
-      <div class="row-content2">
-        <input class="input" type="text" placeholder="Last Name" />
+      <div class="form__second-row">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label></mat-label>
+            <input matInput placeholder="email" />
+            <span matSuffix>@gmail.com</span>
+          </mat-form-field>
+        </p>
       </div>
-    </div>
-    <div class="row-content3">
-      <input class="input_Email" type="text" placeholder="Email Address" />
-    </div>
-    <div class="flex2">
-      <div class="row-content1">
-        <input class="input" type="text" placeholder=" Password" />
+      <div class="form__first-row">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label></mat-label>
+            <input matInput placeholder="Password" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label></mat-label>
+            <input matInput placeholder="Confirm Password" />
+          </mat-form-field>
+        </p>
       </div>
-      <div class="row-content2">
-        <input class="input" type="text" placeholder="  Confirm" />
+
+      <div class="container__checkbox">
+        <span
+          ><mat-checkbox class="example-margin" color="primary"
+            >Show Password
+          </mat-checkbox>
+        </span>
       </div>
-    </div>
-    <div class="modal-footer">
-      <button onclick="submitData()" class="button">Next</button>
-    </div>
+      <div class="container__buttons">
+        <button mat-flat-button>Sign in instead</button>
+        <button mat-raised-button color="primary">Next</button>
+      </div>
+    </form>
+  </div>
+  <div class="container__right">
+    <img
+      src="https://ssl.gstatic.com/accounts/signup/glif/account.svg"
+      alt="account-image"
+    />
   </div>
 </div>
