@@ -6,6 +6,12 @@ import { AppComponent } from './app.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +22,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent],

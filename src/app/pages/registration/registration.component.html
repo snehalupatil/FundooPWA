@@ -1,42 +1,52 @@
 <div class="container">
   <div class="container__left">
-    <h2><span class="logo fundoo">Fundoo Notes</span></h2>
+    <h2>
+      <span class="logo f">F</span><span class="logo u">u</span>
 
+      <span class="logo n">n</span><span class="logo d">d</span
+      ><span class="logo o">o</span><span class="logo o">o</span>
+    </h2>
     <h1>Create your Fundoo Account</h1>
+
     <form class="container__form">
       <div class="form__first-row">
         <p>
           <mat-form-field appearance="outline">
-            <mat-label></mat-label>
-            <input matInput placeholder="First Name" />
+            <mat-label>First Name</mat-label>
+            <input matInput autocomplete="off" />
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <mat-label></mat-label>
-            <input matInput placeholder="Last Name" />
+            <mat-label>Last Name</mat-label>
+            <input matInput autocomplete="off" />
           </mat-form-field>
         </p>
       </div>
       <div class="form__second-row">
         <p>
           <mat-form-field appearance="outline">
-            <mat-label></mat-label>
-            <input matInput placeholder="email" />
+            <mat-label>email</mat-label>
+            <input matInput autocomplete="off" />
             <span matSuffix>@gmail.com</span>
+            <mat-hint>You can use letters, numbers & periods</mat-hint>
           </mat-form-field>
         </p>
       </div>
       <div class="form__first-row">
         <p>
           <mat-form-field appearance="outline">
-            <mat-label></mat-label>
-            <input matInput placeholder="Password" />
+            <mat-label>Password</mat-label>
+            <input matInput autocomplete="off" />
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <mat-label></mat-label>
-            <input matInput placeholder="Confirm Password" />
+            <mat-label>Confirm Password</mat-label>
+            <input matInput autocomplete="off" />
           </mat-form-field>
         </p>
       </div>
+      <mat-hint
+        >Use 8 or more characters with a mix of letters, numbers &
+        symbols</mat-hint
+      >
 
       <div class="container__checkbox">
         <span
@@ -56,5 +66,18 @@
       src="https://ssl.gstatic.com/accounts/signup/glif/account.svg"
       alt="account-image"
     />
+    <p class="tag-line">One account. All of Fundoo working for you.</p>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer__left">
+    <select name="" id="">
+      <option value="English">English(United Kingdom)</option>
+    </select>
+  </div>
+  <div class="footer__right">
+    <button mat-flat-button>Help</button>
+    <button mat-flat-button>Privacy</button>
+    <button mat-flat-button>Terms</button>
   </div>
 </div>

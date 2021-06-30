@@ -1,99 +1,116 @@
-.Body {
-  background-color: #f7ebeb00;
-  width: auto;
-  height: 100vh;
+.container {
+  display: flex;
+  padding: 3em;
+  min-width: 500px;
+  width: 53%;
+  margin: 2% auto;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 2 1 rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.logo {
+  font-weight: bolder;
+}
+
+.f {
+  color: dodgerblue;
+}
+
+.u {
+  color: red;
+}
+
+.n {
+  color: yellow;
+}
+
+.d {
+  color: blue;
+}
+
+.o {
+  color: green;
+}
+
+.container__form {
   display: flex;
   flex-direction: column;
-  position: relative;
+  width: 100%;
+}
+
+.container__left {
+  width: 70%;
+}
+
+.container__right {
+  margin: 2%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__right img {
+  height: 250px;
+  width: 250px;
+}
+
+.tag-line {
+  font-size: medium;
+  text-align: center;
+  font-weight: 100;
+}
+
+.container__form > div {
+  width: 100%;
+}
+
+.mat-form-field {
+  min-width: 200px;
+  margin-right: 2%;
+}
+
+.form__second-row .mat-form-field {
+  width: 400px;
+}
+
+.container__checkbox {
+  display: flex;
+  align-self: baseline;
+  padding: 5px;
+}
+
+.container__buttons {
+  margin-top: 8%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container__buttons button:first-child {
+  color: dodgerblue;
+}
+
+.container__buttons button:first-child:hover {
+  background-color: rgba(30, 144, 255, 0.05);
+}
+
+.container__buttons button:last-child {
+  margin-right: 7%;
+  background-color: #3566b8;
+  height: 50px;
+  width: 70px;
+}
+
+select {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.footer {
+  display: flex;
   justify-content: space-around;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin-top: auto;
-}
-
-.Form {
-  background-color: #ffffff;
-  min-height: 80vh;
-  width: 50%;
-  border-radius: 8px;
-  border: 1px solid #b9b3b3;
-}
-
-h2 {
-  margin: 60px 0px 30px 46px;
-  font-size: xx-large;
-  font-weight: normal;
-}
-
-.flex1 {
-  display: flex;
-  padding: 30px 0px 15px 32px;
-  justify-content: stretch;
-}
-
-.input {
-  width: 180px;
-  height: 30px;
-  border: 1px solid #00000075;
-  border-radius: 5px;
-  margin-left: auto;
-}
-
-.row-content2 {
-  margin-left: 20px;
-}
-
-.row-content3 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: 30px 0px 30px 32px;
-}
-
-.input_Email {
-  width: 390px;
-  height: 30px;
-  border: 1px solid #00000075;
-  border-radius: 5px;
-}
-
-.Email-Text {
-  margin: 0;
-  color: #2b2b2b8c;
-}
-
-.flex2 {
-  display: flex;
-  padding: 70px 0px 30px 32px;
-  justify-content: stretch;
-}
-
-.modal-footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  color: white;
-  border-radius: 10px;
-  padding: 70px 0px 0px 0px;
-}
-
-.button {
-  background-color: #899ccc;
-  border-color: rgb(146, 146, 146);
-  color: rgb(255, 255, 255);
-  border-radius: 5px;
-  padding: 5px 35px;
-  cursor: pointer;
-  height: 40px;
-  width: auto;
-  font-weight: 900;
-}
-
-.text {
-  display: flex;
-  color: #5e79bb;
-  padding: 0px 172px 0px 34px;
-  cursor: pointer;
-  font-weight: normal;
 }
