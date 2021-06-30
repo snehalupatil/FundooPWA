@@ -8,16 +8,22 @@
     </h2>
     <h1>Create your Fundoo Account</h1>
 
-    <form class="container__form">
+    <form class="container__form" [formGroup]="form" (ngSubmit)="submit()">
       <div class="form__first-row">
         <p>
           <mat-form-field appearance="outline">
             <mat-label>First Name</mat-label>
-            <input matInput autocomplete="off" />
+            <input matInput autocomplete="off" formControlName="firstName" />
+            <mat-error *ngIf="form.controls.firstName.errors"
+              >Enter First Name</mat-error
+            >
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Last Name</mat-label>
-            <input matInput autocomplete="off" />
+            <input matInput autocomplete="off" formControlName="lastName" />
+            <mat-error *ngIf="form.controls.lastName.errors"
+              >*Enter Last Name</mat-error
+            >
           </mat-form-field>
         </p>
       </div>
@@ -25,7 +31,10 @@
         <p>
           <mat-form-field appearance="outline">
             <mat-label>email</mat-label>
-            <input matInput autocomplete="off" />
+            <input matInput autocomplete="off" formControlName="email" />
+            <mat-error *ngIf="form.controls.email.errors"
+              >*Choose a Gmail address</mat-error
+            >
             <span matSuffix>@gmail.com</span>
             <mat-hint>You can use letters, numbers & periods</mat-hint>
           </mat-form-field>
@@ -35,7 +44,10 @@
         <p>
           <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
-            <input matInput autocomplete="off" />
+            <input matInput autocomplete="off" formControlName="password" />
+            <mat-error *ngIf="form.controls.password.errors"
+              >*Enter a password</mat-error
+            >
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Confirm Password</mat-label>
