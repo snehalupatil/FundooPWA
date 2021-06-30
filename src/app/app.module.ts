@@ -10,13 +10,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
+    LoginComponent,
     
   ],
   imports: [
@@ -27,9 +31,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatInputModule,
     FormsModule, 
     ReactiveFormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
+  
   bootstrap: [AppComponent],
 
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

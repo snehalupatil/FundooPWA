@@ -15,7 +15,7 @@
             <mat-label>First Name</mat-label>
             <input matInput autocomplete="off" formControlName="firstName" />
             <mat-error *ngIf="form.controls.firstName.errors"
-              >Enter First Name</mat-error
+              >*Enter First Name</mat-error
             >
           </mat-form-field>
           <mat-form-field appearance="outline">
@@ -30,7 +30,7 @@
       <div class="form__second-row">
         <p>
           <mat-form-field appearance="outline">
-            <mat-label>email</mat-label>
+            <mat-label>Email</mat-label>
             <input matInput autocomplete="off" formControlName="email" />
             <mat-error *ngIf="form.controls.email.errors"
               >*Choose a Gmail address</mat-error
@@ -79,17 +79,5 @@
       alt="account-image"
     />
     <p class="tag-line">One account. All of Fundoo working for you.</p>
-  </div>
-</div>
-<div class="footer">
-  <div class="footer__left">
-    <select name="" id="">
-      <option value="English">English(United Kingdom)</option>
-    </select>
-  </div>
-  <div class="footer__right">
-    <button mat-flat-button>Help</button>
-    <button mat-flat-button>Privacy</button>
-    <button mat-flat-button>Terms</button>
   </div>
 </div>
