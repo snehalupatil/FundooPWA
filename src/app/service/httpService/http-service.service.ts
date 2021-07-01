@@ -8,9 +8,10 @@ import { HttpClient } from '@angular/common/http';
 
 export class HttpServiceService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient : HttpClient) { }
 
   post(url: string, data: any, isHeaderRequired: any = false, headders = null){
+    console.log(data, url);
     return this.httpClient.post(url, data, isHeaderRequired && Headers)
   }
 

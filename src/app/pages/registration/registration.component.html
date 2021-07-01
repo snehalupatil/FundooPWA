@@ -44,14 +44,14 @@
         <p>
           <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
-            <input matInput autocomplete="off" formControlName="password" />
+            <input matInput type = "password" autocomplete="off" formControlName="password" />
             <mat-error *ngIf="form.controls.password.errors"
               >*Enter a password</mat-error
             >
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Confirm Password</mat-label>
-            <input matInput autocomplete="off" />
+            <input matInput type = "password" autocomplete="off" />
           </mat-form-field>
         </p>
       </div>
@@ -62,7 +62,9 @@
 
       <div class="container__checkbox">
         <span
-          ><mat-checkbox class="example-margin" color="primary"
+          >
+          <!-- <input matInput #password [type]= "toggle.type"> -->
+          <mat-checkbox #password class="example-margin" color="primary" 
             >Show Password
           </mat-checkbox>
         </span>

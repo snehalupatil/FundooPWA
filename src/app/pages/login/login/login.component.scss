@@ -77,3 +77,51 @@ select {
   display: flex;
   justify-content: space-around;
 }
+
+@media (max-width: 1270px) {
+  .container__right {
+    display: none;
+  }
+  .container {
+    width: 40%;
+    min-width: 300px;
+  }
+  .form__second-row .mat-form-field {
+    width: 100%;
+  }
+  .container__buttons {
+    justify-content: space-between;
+    min-width: 320px;
+    padding-right: 0;
+  }
+  .footer {
+    align-items: center;
+  }
+
+  .mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+}
+/* 
+.mat-hint {
+  font-size: 12px;
+} */
+/* ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+  height: 40px !important;
+}
+::ng-deep .mat-form-field-infix {
+  padding-top: 1px !important;
+}
+.mat-form-field input::placeholder {
+  padding-top: 1px !important;
+}
+::ng-deep
+  mat-form-field.mat-form-field-appearance-outline
+  .mat-form-field-wrapper {
+  margin: 0;
+} */
+
+/* ::ng-deep .mat-form-field-appearance-outline .mat-form-field-label {
+  top: 15px;
+} */
