@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { UserServiceService } from '../../service/userService/user-service.service';
+import { UserServiceService } from 'src/app/service/userService/user-service.service';
 
 @Component({
   selector: 'app-registration',
