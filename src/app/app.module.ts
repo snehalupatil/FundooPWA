@@ -14,6 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login/login.component';
+import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward.component';
+import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { LoginComponent } from './pages/login/login/login.component';
     AppComponent,
     RegistrationComponent,
     LoginComponent,
+    ForgotPasswardComponent,
+    ForgotEmailComponent,
     
   ],
   imports: [

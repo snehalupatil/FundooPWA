@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>
+    <span class="logo f">F</span><span class="logo u">u</span>
+    <span class="logo n">n</span><span class="logo d">d</span
+    ><span class="logo o">o</span><span class="logo o">o</span>
+  </h2>
+  <h1>Find your Password</h1>
+  <h4>Enter your email</h4>
+  <form [formGroup]="forgotPasswordForm" (ngSubmit)="submit()">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput  autocomplete="off" type="email" formControlName="email" />
+        <mat-error *ngIf="forgotPasswordForm.controls.email.errors">*Enter a valid Email</mat-error>
+      </mat-form-field>
+      
+
+    <div class="last-row">
+      <button mat-raised-button color="primary">Next</button>
+      
+    </div>
+  </form>
+</div>
