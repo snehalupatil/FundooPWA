@@ -4,19 +4,24 @@
     <span class="logo n">n</span><span class="logo d">d</span
     ><span class="logo o">o</span><span class="logo o">o</span>
   </h2>
-  <h1>Find your email</h1>
-  <h4>Enter your password </h4>
+  <h1>Create New Password</h1>
+  <h4>Continue to Fundoo</h4>
   <form [formGroup]="forgotEmailForm" (ngSubmit)="submit()">
     <p>
       <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput  autocomplete="off" type="password" formControlName="password" />
-        <mat-error *ngIf="forgotEmailForm.controls.password.errors">*Enter Password</mat-error>
+        <mat-label>Enter New Password</mat-label>
+        <input matInput  autocomplete="off" type="password" formControlName="newPassword" />
+        <mat-error *ngIf="forgotEmailForm.controls.newPassword.errors">*Enter Password</mat-error>
       </mat-form-field>
       
+      <mat-form-field appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput  autocomplete="off" type="password" formControlName="newConfirmPassword" />
+        <mat-error *ngIf="forgotEmailForm.controls.newConfirmPassword.errors">*Enter correct Password</mat-error>
+      </mat-form-field>
 
     <div class="last-row">
-      <button mat-raised-button color="primary">Next</button>
+      <button mat-raised-button color="primary">Update</button>
       
     </div>
   </form>

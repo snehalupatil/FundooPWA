@@ -16,6 +16,7 @@ export class RegistrationComponent implements OnInit {
     lastName: new FormControl('', [Validators.required, Validators.minLength(1)]),
     email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(1)]),
     password: new FormControl('', [Validators.required, Validators.minLength(1)])
+    // confirmPassword: new FormControl('', [Validators.required, Validators.minLength(1)])
   })
 
   hide : Boolean = false

@@ -8,8 +8,8 @@ import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward
 const routes: Routes = [
   { path : 'registration', component : RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'forgot-email', component: ForgotEmailComponent },
-  { path: 'forgot-passward', component: ForgotPasswardComponent }
+  { path: 'forgot-passward', component: ForgotPasswardComponent },
+  { path: 'resetpassword/:token', component: ForgotEmailComponent }
 ];
 
 @NgModule({

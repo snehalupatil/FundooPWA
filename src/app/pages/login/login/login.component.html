@@ -13,20 +13,20 @@
         <input matInput  autocomplete="off" formControlName="email" />
         <mat-error *ngIf="loginForm.controls.email.errors">*Enter an Email</mat-error>
       </mat-form-field>
-      <a routerLink="/forgot-email">Forget email?</a>
+      <a routerLink="/forgot-email"></a>
       <mat-form-field appearance="outline">
         <mat-label>Enter your Password</mat-label>
-        <input matInput type = "password" formControlName="password" />
-        <mat-error *ngIf="loginForm.controls.password.errors">
-          *Enter a Password
+        <input matInput type = "email" formControlName="email" />
+        <mat-error *ngIf="loginForm.controls.email.errors">
+          *Enter an Email
         </mat-error>
       </mat-form-field>
     </p>
-    <a routerLink="/forgot-passward">Forget password?</a>
+    <a routerLink="/forgot-passward">Forgot password?</a>
     <div class="last-row">
       <button mat-flat-button><a routerLink="/registration">Create account</a></button>
-      <button mat-flat-button color="primary" type="submit" [disabled]="!loginForm.valid" >Submit</button>
-      
+      <button mat-flat-button color="primary" type="submit" >Submit</button>
+      <!-- [disabled]="!loginForm.valid" -->
     </div>
   </form>
 </div>
