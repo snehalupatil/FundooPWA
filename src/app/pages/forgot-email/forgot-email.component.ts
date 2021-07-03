@@ -17,6 +17,8 @@ export class ForgotEmailComponent implements OnInit {
     newConfirmPassword: new FormControl('', [Validators.required, Validators.minLength(3)])
   })
 
+  hide: boolean = true;
+
   token: any
    
   ngOnInit(): void {
@@ -24,7 +26,8 @@ export class ForgotEmailComponent implements OnInit {
     this.token = this.route.snapshot.params.token;
   }
   submit() {
-    console.log(this.forgotEmailForm.valid); 
+    console.log(this.forgotEmailForm);
+    if(this.forgotEmailForm.controls.newPassword.value == this.forgotEmailForm.controls.newConfirmPassword.value){ 
     if (this.forgotEmailForm.valid) {
       let data = {
         "newPassword": this.forgotEmailForm.controls.newPassword.value,
@@ -34,6 +37,10 @@ export class ForgotEmailComponent implements OnInit {
       this.service.password(data, this.token).subscribe((data) => {
         console.log(data)
       })
+    }
+  }
+  else{
+      alert("Password should be match");
     }
   }
 
