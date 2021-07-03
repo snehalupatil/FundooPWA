@@ -28,8 +28,8 @@ export class ForgotEmailComponent implements OnInit {
     if (this.forgotEmailForm.valid) {
       let data = {
         "newPassword": this.forgotEmailForm.controls.newPassword.value,
-        "service": "advance",
-        "newConfirmPassword": this.forgotEmailForm.controls.newConfirmPassword.value,
+        // "service": "advance",
+        // "newConfirmPassword": this.forgotEmailForm.controls.newConfirmPassword.value,
       }
       this.service.password(data, this.token).subscribe((data) => {
         console.log(data)

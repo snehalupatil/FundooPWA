@@ -46,11 +46,11 @@
           <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
             <!-- <input matInput type = "password" autocomplete="off" formControlName="password" /> -->
-            <input matInput type="text" placeholder="password" formControlName="password" 
+            <input matInput type="text" autocomplete="off" formControlName="password" 
                                 [type]="hide ? 'password' : 'text'">
                                 <button mat-icon-button matSuffix (click)="hide = !hide"
                                 [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                                <mat-icon>{{hide ? '' : ''}}</mat-icon>
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                                 </button>
             <mat-error *ngIf="form.controls.password.errors"
               >*Enter a password</mat-error
@@ -59,7 +59,7 @@
           <mat-form-field appearance="outline">
             <mat-label>Confirm Password</mat-label>
             <!-- <input matInput type = "password" autocomplete="off" formControlName="password" /> -->
-            <input matInput type="text" autocomplete="off" formControlName="password" 
+            <input matInput type="text" autocomplete="off" formControlName="confirmPassword" 
                                 [type]="hide ? 'password' : 'text'">
                                 <button mat-icon-button matSuffix (click)="hide = !hide"
                                 [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
@@ -87,12 +87,12 @@
           <!-- <mat-checkbox class="example-margin" color="primary" #showPassword
             >Show Password
           </mat-checkbox> -->
-          <input matInput type="text" autocomplete="off" formControlName="password" 
+          <!-- <input matInput type="text" autocomplete="off" formControlName="password" 
                                 [type]="hide ? 'password' : 'text'">
                                 <button mat-icon-button matSuffix (click)="hide = !hide"
                                 [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                                </button>
+                                </button> -->
         </span>
       </div>
       <div class="container__buttons">

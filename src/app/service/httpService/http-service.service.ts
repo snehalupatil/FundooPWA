@@ -15,6 +15,5 @@ export class HttpServiceService {
     let tokenOption = {headers: new HttpHeaders({"Authorization": token})};
     return this.httpClient.post(url, data, isHeaderRequired && tokenOption)
   }
-
   
 }

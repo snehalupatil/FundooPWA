@@ -15,22 +15,23 @@ export class LoginComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(3)]),
     password: new FormControl('', [Validators.required, Validators.minLength(3)])
   })
+
+
   
   get f() {
     return this.loginForm.controls;
   }
 
   submit() {
-    console.log(this.loginForm.valid); 
+    console.log(this.loginForm); 
     if (this.loginForm.valid) {
       let data = {
         "email": this.loginForm.controls.email.value,
         "service": "advance",
-        "password": this.loginForm.controls.password.value,
+        "password": this.loginForm.controls.password.value
       }
       this.service.login(data).subscribe((data) => {
         console.log(data)
-        console.log("Login Successful",data);
       })
     }
   }
