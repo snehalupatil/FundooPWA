@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { UserServiceService } from 'src/app/service/userService/user-service.service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-registration',
@@ -19,7 +20,7 @@ export class RegistrationComponent implements OnInit {
     // confirmPassword: new FormControl('', [Validators.required, Validators.minLength(1)])
   })
 
-  hide : Boolean = false
+  hide = true;
 
   ngOnInit(): void {
   }
@@ -43,6 +44,7 @@ export class RegistrationComponent implements OnInit {
       }
       this.service.registration(data).subscribe((data) => {
         console.log(data);
+        console.log("Registration Successful",data);
 
       })
     }

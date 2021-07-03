@@ -17,6 +17,9 @@ import { LoginComponent } from './pages/login/login/login.component';
 import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward.component';
 import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.component';
 
+import { MatIconModule } from '@angular/material/icon';
+// import { MatSnackBarModule } from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.componen
     ReactiveFormsModule,
     MatCheckboxModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   
