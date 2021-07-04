@@ -116,7 +116,13 @@
         <button mat-flat-button>
           <a routerLink="/login">Sign in instead</a>
         </button>
-        <button mat-raised-button color="primary">Next</button>
+        <!-- <button mat-raised-button color="primary">Next</button> -->
+        <button
+          mat-raised-button
+          (click)="openSnackBar('Data Successfully Stored', 'Dismiss')"
+        >
+          Next
+        </button>
       </div>
     </form>
   </div>

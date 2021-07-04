@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { UserServiceService } from 'src/app/service/userService/user-service.service';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +10,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private service: UserServiceService) { }
+  // constructor(private service: UserServiceService) { }
+
+  constructor(private service: UserServiceService, private snackBar: MatSnackBar) { }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action);
+  }
 
   form = new FormGroup({
     firstName: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -30,26 +36,6 @@ export class RegistrationComponent implements OnInit {
   }
 
   
-
-  // submit() {
-  //   console.log(this.form.valid);
-  //   if 
-  //   if (this.form.valid){
-
-  //     let data = {
-  //       "firstName": this.form.controls.firstName.value,
-  //       "lastName": this.form.controls.lastName.value,
-  //       "email": this.form.controls.email.value,
-  //       "service": "advance",
-  //       "password": this.form.controls.password.value,
-  //     }
-  //     this.service.registration(data).subscribe((data) => {
-  //       console.log(data);
-  //       console.log("Registration Successful",data);
-
-  //     })
-  //   }
-  // }
 
   submit() {
     console.log(this.form.valid); 

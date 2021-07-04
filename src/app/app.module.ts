@@ -16,8 +16,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login/login.component';
 import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward.component';
 import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 import { MatIconModule } from '@angular/material/icon';
+
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
 // import { MatSnackBarModule } from '@angular/material';
 
 
@@ -28,6 +38,7 @@ import { MatIconModule } from '@angular/material/icon';
     LoginComponent,
     ForgotPasswardComponent,
     ForgotEmailComponent,
+    DashboardComponent,
     
   ],
   imports: [
@@ -41,7 +52,15 @@ import { MatIconModule } from '@angular/material/icon';
     MatCheckboxModule,
     MatButtonModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonToggleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule
+
+
   ],
   providers: [],
   
