@@ -1,6 +1,6 @@
 .container {
   width: 25%;
-  height:60vh;
+  height: 60vh;
   min-width: 250px;
   margin: 5% auto;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -70,4 +70,29 @@ form p {
   color: rgb(255, 255, 255);
 }
 
+@media (max-width: 1270px) {
+  .container__right {
+    display: none;
+    overflow: hidden;
+  }
+  .container {
+    width: 40%;
+    min-width: 300px;
+  }
+  .form__second-row .mat-form-field {
+    width: 100%;
+  }
+  .container__buttons {
+    justify-content: space-between;
+    min-width: 320px;
+    padding-right: 0;
+  }
+  .footer {
+    align-items: center;
+  }
 
+  .mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+}

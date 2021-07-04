@@ -1,6 +1,6 @@
 .container {
   width: 28%;
-  height:65vh;
+  height: 65vh;
   min-width: 250px;
   margin: 3% auto;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -42,7 +42,6 @@ h4 {
   color: dodgerblue;
   text-decoration: none;
   font-weight: 500;
-  
 }
 
 a:active {
@@ -80,3 +79,29 @@ select {
   justify-content: space-around;
 }
 
+@media (max-width: 1270px) {
+  .container__right {
+    display: none;
+    overflow: hidden;
+  }
+  .container {
+    width: 40%;
+    min-width: 300px;
+  }
+  .form__second-row .mat-form-field {
+    width: 100%;
+  }
+  .container__buttons {
+    justify-content: space-between;
+    min-width: 320px;
+    padding-right: 0;
+  }
+  .footer {
+    align-items: center;
+  }
+
+  .mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+}
