@@ -10,20 +10,37 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Enter New Password</mat-label>
-        <input matInput  autocomplete="off" type="password" formControlName="newPassword" />
-        <mat-error *ngIf="forgotEmailForm.controls.newPassword.errors">*Enter Password</mat-error>
+        <input
+          matInput
+          autocomplete="off"
+          type="password"
+          formControlName="newPassword"
+        />
+        <mat-error *ngIf="forgotEmailForm.controls.newPassword.errors"
+          >*Enter Password</mat-error
+        >
       </mat-form-field>
-      
+
       <mat-form-field appearance="outline">
         <mat-label>Confirm Password</mat-label>
-        <input matInput  autocomplete="off" type="password" formControlName="newConfirmPassword" />
-        <mat-error *ngIf="forgotEmailForm.controls.newConfirmPassword.errors">*Enter correct Password</mat-error>
+        <input
+          matInput
+          autocomplete="off"
+          type="password"
+          formControlName="newConfirmPassword"
+        />
+        <mat-error *ngIf="forgotEmailForm.controls.newConfirmPassword.errors"
+          >*Enter correct Password</mat-error
+        >
       </mat-form-field>
+    </p>
 
     <div class="last-row">
       <button mat-raised-button color="primary">Update</button>
+      <button mat-flat-button>
+        <a routerLink="/login">Sign in</a>
+      </button>
       <!-- <button mat-raised-button color="primary"><a routerLink="/login">Update</a></button> -->
-      
     </div>
   </form>
 </div>
