@@ -16,6 +16,7 @@ export class RegistrationComponent implements OnInit {
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action);
+    duration: 30000
   }
 
   form = new FormGroup({

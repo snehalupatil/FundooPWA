@@ -5,13 +5,19 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.component';
 import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { SidebarComponent } from './pages/sidebar/sidebar.component';
+import { HeaderComponent } from './pages/header/header.component';
 
 const routes: Routes = [
   { path : 'registration', component : RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-passward', component: ForgotPasswardComponent },
   { path: 'resetpassword/:token', component: ForgotEmailComponent },
-  { path: 'dashboard', component:DashboardComponent }
+  { path: 'dashboard', component:DashboardComponent },
+  { path: 'sidebar', component:SidebarComponent },
+  { path: 'header', component:HeaderComponent }
+
+ 
 ];
 
 @NgModule({

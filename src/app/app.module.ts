@@ -18,7 +18,9 @@ import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward
 import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
+
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule} from '@angular/material/menu';
 
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSelectModule } from '@angular/material/select';
@@ -26,6 +28,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SidebarComponent } from './pages/sidebar/sidebar.component';
+import { HeaderComponent } from './pages/header/header.component';
+
 
 
 // import { MatSnackBarModule } from '@angular/material';
@@ -39,6 +44,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ForgotPasswardComponent,
     ForgotEmailComponent,
     DashboardComponent,
+    SidebarComponent,
+    HeaderComponent,
+   
     
   ],
   imports: [
@@ -58,9 +66,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSidenavModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatSnackBarModule
-
-
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [],
   
