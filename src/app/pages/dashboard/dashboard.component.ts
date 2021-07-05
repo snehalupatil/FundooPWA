@@ -6,8 +6,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  @Input() isSidebarClicked: boolean | undefined;
-  @Input() isMenuClicked: boolean | undefined;
+ 
 
   constructor() {}
 

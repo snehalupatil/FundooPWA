@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  searchForm: any;
 
+  searchInput: string | undefined;
   
+  @Output() public sidebarClickedEvent = new EventEmitter();
+  @Output() public menuClickedEvent = new EventEmitter();
+  searchForm: any;
   
 
   constructor(
