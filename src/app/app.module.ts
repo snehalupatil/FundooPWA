@@ -28,8 +28,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { SidebarComponent } from './pages/sidebar/sidebar.component';
-import { HeaderComponent } from './pages/header/header.component';
+import { SidenavComponent } from './pages/dashboard/component/sidenav/sidenav.component';
+import { HeaderComponent } from './pages/dashboard/component/header/header.component';
+import { AddnotesComponent } from './pages/dashboard/component/addnotes/addnotes.component';
+
+
 
 
 
@@ -44,11 +47,12 @@ import { HeaderComponent } from './pages/header/header.component';
     ForgotPasswardComponent,
     ForgotEmailComponent,
     DashboardComponent,
-    SidebarComponent,
+    SidenavComponent,
     HeaderComponent,
-   
-    
+    AddnotesComponent,
+  
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

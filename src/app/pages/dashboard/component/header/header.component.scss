@@ -1,24 +1,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-.toolbar__right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-items: flex-end;
-  justify-self: flex-end;
-  align-items: center;
-}
-
-.mat-button {
-  min-width: 0px;
-  padding: 2px;
-  line-height: 0;
-
-  border-radius: 50%;
-}
-
 .toolbar__left {
   display: flex;
+  flex-direction: row !important;
   align-items: center;
 }
 
@@ -59,7 +43,7 @@
 }
 
 .toolbar__mid .grid {
-  margin-left: 7%;
+  margin-left: 5%;
 }
 
 .search {

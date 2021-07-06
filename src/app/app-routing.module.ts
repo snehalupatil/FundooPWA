@@ -5,8 +5,12 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.component';
 import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { SidebarComponent } from './pages/sidebar/sidebar.component';
-import { HeaderComponent } from './pages/header/header.component';
+import { SidenavComponent } from './pages/dashboard/component/sidenav/sidenav.component';
+import { HeaderComponent } from './pages/dashboard/component/header/header.component';
+import { AddnotesComponent } from './pages/dashboard/component/addnotes/addnotes.component';
+
+
+
 
 const routes: Routes = [
   { path : 'registration', component : RegistrationComponent },
@@ -14,8 +18,12 @@ const routes: Routes = [
   { path: 'forgot-passward', component: ForgotPasswardComponent },
   { path: 'resetpassword/:token', component: ForgotEmailComponent },
   { path: 'dashboard', component:DashboardComponent },
-  { path: 'sidebar', component:SidebarComponent },
-  { path: 'header', component:HeaderComponent }
+  { path: 'sidenav', component:SidenavComponent },
+  { path: 'header', component:HeaderComponent },
+  { path: 'addnotes', component:AddnotesComponent }
+
+  
+  
 
  
 ];
