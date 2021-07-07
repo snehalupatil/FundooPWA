@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +12,5 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  changeRoute() {
-    
-  }
+  logout(){}
 }

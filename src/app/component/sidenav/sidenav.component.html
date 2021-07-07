@@ -1,0 +1,48 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" position="left">
+    <div
+      class="sidebar__notes sidebar__notes-notes"
+      style="margin-bottom: 20px"
+    >
+      <button>
+        <mat-icon>lightbulb</mat-icon>
+      </button>
+      <button style="width: 35px; height: 35px">Notes</button>
+    </div>
+    <div class="sidebar__notes sidebar__notes-bell" style="margin-bottom: 20px">
+      <button>
+        <mat-icon>notifications_none</mat-icon>
+      </button>
+      <button>Remainders</button>
+    </div>
+    <div class="sidebar__notes sidebar__notes-edit" style="margin-bottom: 20px">
+      <button>
+        <mat-icon>create</mat-icon>
+      </button>
+      <button>Edit Labels</button>
+    </div>
+    <div
+      class="sidebar__notes sidebar__notes-archieve"
+      style="margin-bottom: 20px"
+    >
+      <button>
+        <mat-icon>archive</mat-icon>
+      </button>
+      <button>Archieve</button>
+    </div>
+    <div
+      class="sidebar__notes sidebar__notes-delete"
+      style="margin-bottom: 20px"
+    >
+      <button>
+        <mat-icon>delete_outline</mat-icon>
+      </button>
+      <button>Trash</button>
+    </div>
+  </mat-drawer>
+  <div style="background-color: rgb(255, 255, 255); width: 100%; height: 100%">
+    <div class="noteDiv">
+      <app-notes></app-notes>
+    </div>
+  </div>
+</mat-drawer-container>

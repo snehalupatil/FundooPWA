@@ -5,10 +5,8 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.component';
 import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { SidenavComponent } from './pages/dashboard/component/sidenav/sidenav.component';
-import { HeaderComponent } from './pages/dashboard/component/header/header.component';
-import { AddnotesComponent } from './pages/dashboard/component/addnotes/addnotes.component';
 
+import { HeaderComponent } from './component/header/header.component';
 
 
 
@@ -18,9 +16,9 @@ const routes: Routes = [
   { path: 'forgot-passward', component: ForgotPasswardComponent },
   { path: 'resetpassword/:token', component: ForgotEmailComponent },
   { path: 'dashboard', component:DashboardComponent },
-  { path: 'sidenav', component:SidenavComponent },
-  { path: 'header', component:HeaderComponent },
-  { path: 'addnotes', component:AddnotesComponent }
+  
+  { path: 'header', component:HeaderComponent }
+
 
   
   

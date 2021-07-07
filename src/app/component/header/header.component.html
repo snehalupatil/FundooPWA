@@ -1,0 +1,62 @@
+<div style="height: 100vh">
+  <div style="height: 10vh">
+    <div style="border-bottom: 1px solid #bfbebe; height: 8vh">
+      <div class="header">
+        <div class="head-left">
+          <div>
+            <button
+              type="button"
+              mat-button
+              mat-icon-button
+              aria-label="Example icon button with a menu icon"
+            >
+              <mat-icon>menu</mat-icon>
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://www.gstatic.com/images/branding/product/2x/keep_2020q4_48dp.png"
+              style="height: 40px"
+            />
+          </div>
+          <div
+            style="
+              width: 20%;
+              background-color: rgb(255, 255, 255);
+              padding: 15px 0px 12px 0px;
+              font-size: x-large;
+              color: rgb(124, 124, 124);
+            "
+          >
+            Fundoo
+          </div>
+        </div>
+        <div class="head-center">
+          <form class="search">
+            <button class="material-icons" aria-label="Search">search</button>
+            <div>
+              <input class="searchInput" aria-label="Search" type="text" />
+            </div>
+          </form>
+        </div>
+        <div class="head-right">
+          <div class="example-button-container">
+            <button
+              mat-button
+              color="white"
+              aria-label="Example icon button with a home icon"
+              type="button"
+            >
+              <mat-icon>account_circle</mat-icon>
+              <mat-menu class="user-box" #belowMenu="matMenu" yPosition="below">
+              </mat-menu>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-sidenav></app-sidenav>
+<mat-drawer #drawer class="example-sidenav" mode="side"></mat-drawer>

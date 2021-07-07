@@ -1,11 +1,174 @@
-<div class="container">
-  <app-header></app-header>
-  <div class="main-container">
-    <app-sidenav></app-sidenav>
-    <div class="content">
-      <h1>Notes</h1>
+<div style="height: 100vh">
+  <div style="border-bottom: 1px solid #bfbebe; height: 8vh">
+    <div class="header">
+      <div class="head-left">
+        <div
+          style="
+            width: 30%;
+            background-color: rgb(255, 255, 255);
+            padding: 12px 0px 12px 10px;
+          "
+        >
+          <button
+            type="button"
+            mat-button
+            (click)="drawer.toggle()"
+            mat-icon-button
+            style="
+              margin-top: -7px;
+              background-color: rgb(255, 255, 255);
+              color: black;
+            "
+            aria-label="Example icon button with a menu icon"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div
+          style="
+            width: 30%;
+            background-color: rgb(255, 255, 255);
+            margin-right: -40px;
+            margin-left: -35px;
+          "
+        >
+          <img src="../../../assets/keep_image.png" height="40px" />
+        </div>
+        <div
+          style="
+            width: 20%;
+            background-color: rgb(255, 255, 255);
+            padding: 15px 0px 12px 0px;
+            font-size: x-large;
+            color: rgb(124, 124, 124);
+          "
+        >
+          Fundoo
+        </div>
+      </div>
+      <div class="head-center">
+        <form class="search">
+          <!-- <input matInut type="text" placeholder="Search" /> -->
+          <button class="material-icons" aria-label="Search">search</button>
+          <div>
+            <input class="searchInput" aria-label="Search" type="text" />
+          </div>
+        </form>
+      </div>
+      <div class="head-right">
+        <div class="example-button-container">
+          <button
+            mat-button
+            color="white"
+            aria-label="Example icon button with a home icon"
+            type="button"
+          >
+            <mat-icon>account_circle</mat-icon>
+            <mat-menu class="user-box" #belowMenu="matMenu" yPosition="below">
+              <div style="width: 90px">Name</div>
+              <button mat-menu-item>Email</button>
+            </mat-menu>
+            <!-- <mat-menu #menu="matMenu" [hasBackdrop]="false">
+              <ng-template matMenuContent>
+                <div class="container">
+                  <div class="container__image">
+                    <a mat-fab>
+                      <mat-icon class="menu-icon">account_circle</mat-icon>
+                    </a>
+                  </div>
+                  <div class="container__info">
+                    <span>{{ name }}</span>
+                    <p>{{ email }}</p>
+                    <p>Name</p>
+                    <p>EMail</p>
+                  </div>
+                  <div class="container__manage">
+                    <button mat-stroked-button>
+                      Manage your Fundoo Account
+                    </button>
+                  </div>
+                  <div class="container__anoter-account">
+                    <button mat-flat-button>
+                      <img
+                        src="https://cdn0.iconfinder.com/data/icons/essential-02/50/AddPerson-512.png"
+                        alt="add"
+                      />
+                      Add another account
+                    </button>
+                    <div class="container__sign-out">
+                      <button mat-stroked-button (click)="logout()">
+                        Sign out
+                      </button>
+                    </div>
+                    <div class="footer">
+                      <a mat-flat-button> Privacy Policy </a>
+                      <a>.</a>
+                      <a mat-flat-button>Terms of Service</a>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </mat-menu> -->
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- <app-addnotes></app-addnotes> -->
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <div
+        class="sidebar__notes sidebar__notes-notes"
+        style="margin-bottom: 20px"
+      >
+        <button>
+          <mat-icon>lightbulb</mat-icon>
+        </button>
+        <button style="width: 35px; height: 35px">Notes</button>
+      </div>
+      <div
+        class="sidebar__notes sidebar__notes-bell"
+        style="margin-bottom: 20px"
+      >
+        <button>
+          <mat-icon>notifications_none</mat-icon>
+        </button>
+        <button>Remainders</button>
+      </div>
+      <div
+        class="sidebar__notes sidebar__notes-edit"
+        style="margin-bottom: 20px"
+      >
+        <button>
+          <mat-icon>create</mat-icon>
+        </button>
+        <button>Edit Labels</button>
+      </div>
+      <div
+        class="sidebar__notes sidebar__notes-archieve"
+        style="margin-bottom: 20px"
+      >
+        <button>
+          <mat-icon>archive</mat-icon>
+        </button>
+        <button>Archieve</button>
+      </div>
+      <div
+        class="sidebar__notes sidebar__notes-delete"
+        style="margin-bottom: 20px"
+      >
+        <button>
+          <mat-icon>delete_outline</mat-icon>
+        </button>
+        <button>Trash</button>
+      </div>
+    </mat-drawer>
+    <div
+      style="background-color: rgb(255, 255, 255); width: 100%; height: 100%"
+    >
+      <div class="noteDiv">
+        <app-createnote></app-createnote>
+      </div>
+    </div>
+  </mat-drawer-container>
 </div>

@@ -28,15 +28,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { SidenavComponent } from './pages/dashboard/component/sidenav/sidenav.component';
-import { HeaderComponent } from './pages/dashboard/component/header/header.component';
-import { AddnotesComponent } from './pages/dashboard/component/addnotes/addnotes.component';
+import { HeaderComponent } from './component/header/header.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { CreatenoteComponent } from './component/createnote/createnote.component';
 
-
-
-
-
-// import { MatSnackBarModule } from '@angular/material';
 
 
 @NgModule({
@@ -47,9 +42,9 @@ import { AddnotesComponent } from './pages/dashboard/component/addnotes/addnotes
     ForgotPasswardComponent,
     ForgotEmailComponent,
     DashboardComponent,
-    SidenavComponent,
     HeaderComponent,
-    AddnotesComponent,
+    CreatenoteComponent,
+    
   
   ],
   
@@ -71,7 +66,9 @@ import { AddnotesComponent } from './pages/dashboard/component/addnotes/addnotes
     MatSliderModule,
     MatSlideToggleModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatExpansionModule
+    
   ],
   providers: [],
   
