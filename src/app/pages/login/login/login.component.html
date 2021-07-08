@@ -10,8 +10,10 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
-        <input matInput  autocomplete="off" formControlName="email" />
-        <mat-error *ngIf="loginForm.controls.email.errors">*Enter an Email</mat-error>
+        <input matInput autocomplete="off" formControlName="email" />
+        <mat-error *ngIf="loginForm.controls.email.errors"
+          >*Enter an Email</mat-error
+        >
       </mat-form-field>
       <!-- <a routerLink="/forgot-email"></a> -->
       <mat-form-field appearance="outline">
@@ -24,8 +26,13 @@
     </p>
     <a routerLink="/forgot-passward">Forgot password?</a>
     <div class="last-row">
-      <button mat-flat-button><a routerLink="/registration">Create account</a></button>
-      <button mat-flat-button color="primary" type="submit" >Submit</button>
+      <button mat-flat-button>
+        <a routerLink="/registration">Create account</a>
+      </button>
+      <button mat-flat-button color="primary" type="submit">Submit</button>
+      <!-- <button mat-flat-button color="primary" type="submit">
+        <a routerLink="/dashboard">Submit</a>
+      </button> -->
       <!-- [disabled]="!loginForm.valid" -->
     </div>
   </form>

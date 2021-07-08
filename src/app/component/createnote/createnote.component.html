@@ -1,7 +1,7 @@
 <mat-accordion>
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
-      <form>
+      <form [formGroup]="form" (ngSubmit)="onClose()" id="my-form">
         <div>
           <div
             style="
@@ -32,7 +32,7 @@
       </form>
     </mat-expansion-panel-header>
 
-    <form>
+    <form [formGroup]="form">
       <div>
         <input
           class="searchInput"
@@ -44,7 +44,7 @@
       <div style="display: flex; justify-content: space-between">
         <app-icon></app-icon>
 
-        <button mat-button type="submit">Close</button>
+        <button mat-button type="submit" form="my-form">Close</button>
       </div>
     </form>
   </mat-expansion-panel>

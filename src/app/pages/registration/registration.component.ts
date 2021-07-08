@@ -15,8 +15,8 @@ export class RegistrationComponent implements OnInit {
   constructor(private service: UserServiceService, private snackBar: MatSnackBar) { }
 
   openSnackBar(message: string, action: string) {
-    this.snackBar.open(message, action);
-    duration: 30000
+    this.snackBar.open(message, action), { duration: 3000 };
+    
   }
 
   form = new FormGroup({

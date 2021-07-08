@@ -6,7 +6,6 @@ import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.componen
 import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
-import { HeaderComponent } from './component/header/header.component';
 
 
 
@@ -17,12 +16,6 @@ const routes: Routes = [
   { path: 'resetpassword/:token', component: ForgotEmailComponent },
   { path: 'dashboard', component:DashboardComponent },
   
-  { path: 'header', component:HeaderComponent }
-
-
-  
-  
-
  
 ];
 

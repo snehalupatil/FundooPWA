@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserServiceService } from 'src/app/service/userService/user-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { UserServiceService } from 'src/app/service/userService/user-service.ser
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private service: UserServiceService) { }
+  constructor(private service: UserServiceService, private router: Router) { }
 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(3)]),
@@ -30,8 +31,16 @@ export class LoginComponent implements OnInit {
         "service": "advance",
         "password": this.loginForm.controls.password.value
       }
-      this.service.login(data).subscribe((data) => {
+      this.service.login(data).subscribe((data: any) => {
         console.log(data)
+
+        localStorage.setItem("userName", data["firstName"]+data["lastName"]);
+        localStorage.setItem("email", data["email"]);
+        localStorage.setItem("token", data["id"]);
+        if ( data['id'] != null ){
+        this.router.navigate(['/dashboard']);
+        
+        }
       })
     }
   }
