@@ -31,6 +31,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HeaderComponent } from './component/header/header.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CreatenoteComponent } from './component/createnote/createnote.component';
+import { IconComponent } from './component/icon/icon.component';
 
 
 
@@ -44,6 +45,7 @@ import { CreatenoteComponent } from './component/createnote/createnote.component
     DashboardComponent,
     HeaderComponent,
     CreatenoteComponent,
+    IconComponent,
     
   
   ],
