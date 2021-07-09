@@ -34,7 +34,7 @@ import { CreatenoteComponent } from './component/createnote/createnote.component
 import { IconComponent } from './component/icon/icon.component';
 import { DisplaynodeComponent } from './component/displaynode/displaynode.component';
 import { NoteComponent } from './component/note/note.component';
-
+import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
 
 
 @NgModule({

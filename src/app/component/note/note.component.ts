@@ -1,4 +1,6 @@
+import { DashboardComponent } from './../../pages/dashboard/dashboard.component';
 import { Component, OnInit } from '@angular/core';
+import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
 
 @Component({
   selector: 'app-note',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoteComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor( private service: NoteServiceService ) { }
 
-  ngOnInit(): void {
+  
+  notes = [];
+  token_Id = localStorage.getItem('token');
+  
+  // note-variable
+
+  ngOnInit(){
+    this.getNotes()
+    
+  }
+
+  // getnotes==token-> call api -> parent-child relation
+   getNotes(){
+    this.service.getNotes( this.token_Id).subscribe((data:any)=>{
+      console.log(data['data'].data);
+      this.notes=data['data'].data
+      
+    })
+    
+    
   }
 
 }
