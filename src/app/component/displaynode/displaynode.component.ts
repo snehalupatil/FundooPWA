@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
+import { UserServiceService } from 'src/app/service/userService/user-service.service';
+
 
 @Component({
   selector: 'app-displaynode',
@@ -6,12 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./displaynode.component.scss']
 })
 export class DisplaynodeComponent implements OnInit {
+  @Input() notes: any;
+  
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor( ) { 
+    
   }
 
-  openDialog(){}
+
+  ngOnInit(): void {
+    console.log(this.notes)
+  }
+
+  
   
 }
+

@@ -1,4 +1,4 @@
-import { DashboardComponent } from './../../pages/dashboard/dashboard.component';
+
 import { Component, OnInit } from '@angular/core';
 import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
 
@@ -11,15 +11,27 @@ export class NoteComponent implements OnInit {
 
   
   constructor( private service: NoteServiceService ) { }
-
-  
   notes = [];
+
+  // title= "Snehal"
+  // description={
+  //   name:"Snehal",
+  //   age:25,
+  // }
+
+  // title= "blog";
+  // data={
+  //   name:"Snehal",
+  //   age:25,
+  // }
+  
+ 
   token_Id = localStorage.getItem('token');
   
   // note-variable
 
   ngOnInit(){
-    this.getNotes()
+    this.getNotes();
     
   }
 
@@ -30,7 +42,6 @@ export class NoteComponent implements OnInit {
       this.notes=data['data'].data
       
     })
-    
     
   }
 

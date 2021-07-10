@@ -1,5 +1,6 @@
 .main-container {
   margin-left: -200px;
+  
 }
 
 .display-box {
@@ -14,5 +15,16 @@
     width: 80%;
     margin-top: 5%;
     border: none;
+  }
+
+  textarea {
+    margin-left: 5%;
+    width: 80%;
+    border: none;
+    resize: none;
+  }
+
+  .icons{
+    padding-top: 50px;
   }
 }
