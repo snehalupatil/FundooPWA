@@ -1,17 +1,27 @@
-<div class="main-container">
+<!-- <div class="main-container">
   <ng-container *ngFor="let note of notes">
     <div class="display-box">
-      <div>
-        <h2>{{ note.title }}</h2>
-        <h2>{{ note.description }}</h2>
+      <div class="title-discription" (click)="openDialog(card)">
+        <div fxLayout="row">
+          <div fxFlex="20">
+            <p class="wordBreakTitle">{{ note.title }}</p>
+          </div>
+        </div>
+
+        <div class="descriptionbox" (click)="openDialog(card)">
+          <p class="wordBreak">{{ note.description }}</p>
+        </div>
       </div>
-      <div class="icons"></div>
+      > -->
+<!-- <div>
+        <h2>{{ note.title }}</h2>
+        <h3>{{ note.description }}</h3>
+      </div> -->
+<!-- <div class="icons"></div>
       <app-icon></app-icon>
     </div>
-    
   </ng-container>
-</div>
-
+</div> -->
 
 <!-- <ng-container *ngFor="let note of notes">
   <div class="display-box">
@@ -28,3 +38,28 @@
   </div>
   
 </ng-container> -->
+<div>
+  <div class="mar">
+    <mat-card class="main-card" *ngFor="let note of notes">
+      <div class="title-discription" (click)="openDialog(card)">
+        <div>
+          <div>
+            <h2 class="wordBreakTitle">{{ note.title }}</h2>
+            <!-- <app-notedialog
+              (click)="togglePin()"
+              [isPined]="note.isPined"
+            ></app-notedialog> -->
+          </div>
+        </div>
+
+        <div class="descriptionbox" (click)="openDialog(card)">
+          <h3 class="wordBreak">{{ note.description }}</h3>
+        </div>
+      </div>
+
+      <div class="icons">
+        <app-icon></app-icon>
+      </div>
+    </mat-card>
+  </div>
+</div>

@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
 
@@ -9,37 +8,21 @@ import { NoteServiceService } from 'src/app/service/noteService/note-service.ser
 })
 export class NoteComponent implements OnInit {
 
-  
   constructor( private service: NoteServiceService ) { }
-  notes = [];
-
-  // title= "Snehal"
-  // description={
-  //   name:"Snehal",
-  //   age:25,
-  // }
-
-  // title= "blog";
-  // data={
-  //   name:"Snehal",
-  //   age:25,
-  // }
-  
+  notes = [].reverse();
  
   token_Id = localStorage.getItem('token');
-  
-  // note-variable
 
   ngOnInit(){
-    this.getNotes();
+    this.getAllNotes();
+    this.service.getRefreshedData().subscribe(() => this.getAllNotes());
     
   }
 
-  // getnotes==token-> call api -> parent-child relation
-   getNotes(){
+   getAllNotes(){
     this.service.getNotes( this.token_Id).subscribe((data:any)=>{
       console.log(data['data'].data);
-      this.notes=data['data'].data
+      this.notes=data['data'].data.reverse()
       
     })
     

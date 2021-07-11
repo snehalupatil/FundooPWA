@@ -1,30 +1,53 @@
-.main-container {
-  margin-left: -200px;
-  
+.mar {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  margin-left: 170px;
+  width: 1200px;
 }
 
-.display-box {
-  margin-top: 1%;
-  min-height: 100px;
-  width: 250px;
-  border-radius: 4%;
-  border: 1px solid lightgray;
+.icon-flex {
+  display: flex;
+  width: 20px;
 
-  input {
-    margin-left: 5%;
-    width: 80%;
-    margin-top: 5%;
-    border: none;
-  }
+  justify-content: space-around;
+}
 
-  textarea {
-    margin-left: 5%;
-    width: 80%;
-    border: none;
-    resize: none;
-  }
+.class:active,
+.class:focus,
+.class:hover .third-block {
+  opacity: 1;
+}
 
-  .icons{
-    padding-top: 50px;
-  }
+.mar .mat-card {
+  margin-left: 15px;
+  width: 200px;
+}
+.mar .mat-card:hover + .third-block {
+  opacity: 1;
+}
+
+::ng-deep .mat-standard-chip.mat-chip-with-trailing-icon {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.display {
+  /* border: 1px solid black;*/
+  display: flex;
+}
+
+::ng-deep .mat-card {
+  margin-top: 20px;
+}
+
+.main-card:hover .div {
+  visibility: visible;
+}
+
+.flexcontainer {
+  flex-flow: column wrap;
 }

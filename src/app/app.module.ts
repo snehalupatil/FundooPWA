@@ -28,13 +28,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CreatenoteComponent } from './component/createnote/createnote.component';
 import { IconComponent } from './component/icon/icon.component';
 import { DisplaynodeComponent } from './component/displaynode/displaynode.component';
 import { NoteComponent } from './component/note/note.component';
-import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
+
 
 
 @NgModule({
@@ -50,6 +52,7 @@ import { NoteServiceService } from 'src/app/service/noteService/note-service.ser
     IconComponent,
     DisplaynodeComponent,
     NoteComponent,
+    
     
   
   ],
@@ -73,7 +76,9 @@ import { NoteServiceService } from 'src/app/service/noteService/note-service.ser
     MatSlideToggleModule,
     MatSnackBarModule,
     MatMenuModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule,
+    MatCardModule
     
   ],
   providers: [],

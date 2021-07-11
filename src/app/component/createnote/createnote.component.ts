@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
+// import { subject } from 'RXJS'
 
 @Component({
   selector: 'app-createnote',
@@ -29,5 +30,16 @@ export class CreatenoteComponent implements OnInit {
     });
   }
 
+  // togglePin() {
+  //   this.service
+  //     .togglePin({ isPined: !this.notes.isPined, noteIdList: [this.notes.id] })
+  //     // .subscribe(
+  //     //   (data) => console.log('success'),
+  //     //   (error) =>
+  //     //     this.snackBar.open('Error unpinning!', '', {
+  //     //       duration: 2000,
+  //     //     })
+  //     // );
+  // }
  
 }
