@@ -26,4 +26,8 @@ export class UserServiceService {
     return this.httpService.post(`${this.url}user/reset-password`, data, true, token)
   }
 
+  loggedIn(){
+    return !!localStorage.getItem('token')
+  }
+
 }

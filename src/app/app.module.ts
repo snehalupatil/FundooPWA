@@ -37,6 +37,7 @@ import { IconComponent } from './component/icon/icon.component';
 import { DisplaynodeComponent } from './component/displaynode/displaynode.component';
 import { NoteComponent } from './component/note/note.component';
 import { UpdateComponent } from './component/update/update.component';
+import { ColorComponent } from './component/color/color.component';
 
 
 
@@ -54,6 +55,7 @@ import { UpdateComponent } from './component/update/update.component';
     DisplaynodeComponent,
     NoteComponent,
     UpdateComponent,
+    ColorComponent,
     
     
   

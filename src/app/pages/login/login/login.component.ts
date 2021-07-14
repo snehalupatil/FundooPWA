@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.service.login(data).subscribe((data: any) => {
         console.log(data)
 
-        localStorage.setItem("userName", data["firstName"]+data["lastName"]);
+        localStorage.setItem("username", data["firstName "]+data["lastName"]);
         localStorage.setItem("email", data["email"]);
         localStorage.setItem("token", data["id"]);
         if ( data['id'] != null ){
@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
     }
   }
   
+  hide: boolean = true;
   ngOnInit(): void {
   }
 

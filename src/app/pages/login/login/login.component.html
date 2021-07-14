@@ -18,7 +18,22 @@
       <!-- <a routerLink="/forgot-email"></a> -->
       <mat-form-field appearance="outline">
         <mat-label>Enter your Password</mat-label>
-        <input matInput autocomplete="off" formControlName="password" />
+        <input
+          matInput
+          type="text"
+          autocomplete="off"
+          formControlName="password"
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
         <mat-error *ngIf="loginForm.controls.password.errors">
           *Enter Correct Password
         </mat-error>

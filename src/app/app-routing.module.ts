@@ -5,7 +5,7 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.component';
 import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-
+import { AuthenticationGuard } from './service/authguard/authentication.guard'
 
 
 
@@ -14,9 +14,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'forgot-passward', component: ForgotPasswardComponent },
   { path: 'resetpassword/:token', component: ForgotEmailComponent },
-  { path: 'dashboard', component:DashboardComponent },
+  { path: 'dashboard', component:DashboardComponent, canActivate:[ AuthenticationGuard ] },
   
- 
 ];
 
 @NgModule({

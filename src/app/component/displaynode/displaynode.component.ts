@@ -27,9 +27,8 @@ export class DisplaynodeComponent implements OnInit {
 
   openDialog(card:any):void{
      this.card=card;
-     const dialogRef = this.dialog.open(UpdateComponent, {
-       
-       data: {note: card}
+     const dialogRef = this.dialog.open(UpdateComponent, { 
+      data: {note: card}
      })
    }
 
