@@ -1,0 +1,15 @@
+<mat-card class="active-add-note">
+  <form (ngSubmit)="updateNote()">
+    <div fxLayout="row" class="active-input">
+      <input type="text" placeholder="title" value="{{ title }}" />
+    </div>
+    <div fxLayout="row" class="note-input">
+      <textarea type="text" placeholder="Take a note" value="{{ description }}">
+      </textarea>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="icons">
+      <app-icon style="width: 60%"></app-icon>
+      <button mat-raised-button class="close-button">Close</button>
+    </div>
+  </form>
+</mat-card>

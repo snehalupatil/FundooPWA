@@ -16,12 +16,14 @@ export class NoteServiceService {
   getRefreshedData() {
     return this.refresh;
   }
-  constructor(private httpService: HttpServiceService) { }
+  
+  constructor(private httpService: HttpServiceService) {}
 
   url = environment.baseurl
 
   createNote = (userData: any, token: any) => {
-    return this.httpService.post(`${this.url}notes/addNotes`, userData, true, token).pipe(
+    return this.httpService.post(`${this.url}notes/addNotes`, userData, true, token)
+    .pipe(
       tap(() => {
         this.refresh.next();
       })
@@ -32,6 +34,13 @@ export class NoteServiceService {
     return this.httpService.get(`${this.url}notes/getNotesList`, true, token)
   }
 
-  
+  updateNote = (userData: any, token: any) => {
+    return this.httpService.post(`${this.url}notes/updateNotes`, userData, true, token)
+    .pipe(
+      tap(() => {
+        this.refresh.next();
+      })
+    );
+  }
 
   }

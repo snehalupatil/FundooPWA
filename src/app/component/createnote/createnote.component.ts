@@ -26,20 +26,12 @@ export class CreatenoteComponent implements OnInit {
       description: this.form.controls.notesText.value,
     }
     this.service.createNote(data, this.token_Id).subscribe((data: any) => {
-      console.log(data);
+      console.log("Created Successfully",data);
+      this.form.reset();
+      // get api= dat sharing=> child-parent 
     });
   }
 
-  // togglePin() {
-  //   this.service
-  //     .togglePin({ isPined: !this.notes.isPined, noteIdList: [this.notes.id] })
-  //     // .subscribe(
-  //     //   (data) => console.log('success'),
-  //     //   (error) =>
-  //     //     this.snackBar.open('Error unpinning!', '', {
-  //     //       duration: 2000,
-  //     //     })
-  //     // );
-  // }
+  
  
 }

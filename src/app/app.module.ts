@@ -36,6 +36,7 @@ import { CreatenoteComponent } from './component/createnote/createnote.component
 import { IconComponent } from './component/icon/icon.component';
 import { DisplaynodeComponent } from './component/displaynode/displaynode.component';
 import { NoteComponent } from './component/note/note.component';
+import { UpdateComponent } from './component/update/update.component';
 
 
 
@@ -52,6 +53,7 @@ import { NoteComponent } from './component/note/note.component';
     IconComponent,
     DisplaynodeComponent,
     NoteComponent,
+    UpdateComponent,
     
     
   

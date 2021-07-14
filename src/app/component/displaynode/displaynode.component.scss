@@ -4,7 +4,7 @@
   flex-direction: row;
   flex-flow: wrap;
   margin-left: 170px;
-  width: 1200px;
+  width: 1100px;
 }
 
 .icon-flex {
@@ -12,6 +12,15 @@
   width: 20px;
 
   justify-content: space-around;
+}
+
+.icons {
+  // display: none;
+  visibility: hidden;
+}
+
+.mar:hover .icons {
+  visibility: visible;
 }
 
 .class:active,
