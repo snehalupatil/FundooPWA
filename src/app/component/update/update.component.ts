@@ -22,11 +22,11 @@ export class UpdateComponent implements OnInit {
       this.description = data.note.description,
       this.id = data.note.id    
     }
-    
-    // form = new FormGroup({
-    //   title: new FormControl(this.data.note.title),
-    //   description: new FormControl(this.data.note.description)
-    // })
+  
+    form = new FormGroup({
+      title: new FormControl(this.data.note.title),
+      description: new FormControl(this.data.note.description)
+    })
 
   ngOnInit(): void {
   }
@@ -35,14 +35,14 @@ export class UpdateComponent implements OnInit {
   updateNote(){
     let data = {
       noteId: this.id,
-      // title: this.form.controls.title.value,
-      // description: this.form.controls.description.value
+      title: this.form.controls.title.value,
+      description: this.form.controls.description.value
     }
     console.log(data);
-    // this.noteService.updateNote(data,this.token_Id).subscribe((response:any) => {
-    //   console.log(" updated successfull", response);
-    //   this.dialogRef.close(data);
-    // })
+    this.noteService.updateNote(data,this.token_Id).subscribe((response:any) => {
+      console.log(" updated successfull", response);
+      this.dialogRef.close(data);
+    })
   }
 
 }

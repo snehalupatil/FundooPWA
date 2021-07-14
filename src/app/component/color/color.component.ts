@@ -12,4 +12,8 @@ export class ColorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getColor(){
+    
+  }
+
 }
