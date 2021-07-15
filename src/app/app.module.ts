@@ -38,6 +38,8 @@ import { DisplaynodeComponent } from './component/displaynode/displaynode.compon
 import { NoteComponent } from './component/note/note.component';
 import { UpdateComponent } from './component/update/update.component';
 import { ColorComponent } from './component/color/color.component';
+import { TrashComponent } from './component/trash/trash.component';
+import { ArchiveComponent } from './component/archive/archive.component';
 
 
 
@@ -56,6 +58,8 @@ import { ColorComponent } from './component/color/color.component';
     NoteComponent,
     UpdateComponent,
     ColorComponent,
+    TrashComponent,
+    ArchiveComponent,
     
     
   

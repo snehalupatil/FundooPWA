@@ -6,6 +6,7 @@ import { ForgotEmailComponent } from './pages/forgot-email/forgot-email.componen
 import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthenticationGuard } from './service/authguard/authentication.guard'
+import { TrashComponent } from './component/trash/trash.component';
 
 
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'forgot-passward', component: ForgotPasswardComponent },
   { path: 'resetpassword/:token', component: ForgotEmailComponent },
   { path: 'dashboard', component:DashboardComponent, canActivate:[ AuthenticationGuard ] },
+  { path: 'trashNotes', component:TrashComponent, canActivate:[ AuthenticationGuard ] },
   
 ];
 

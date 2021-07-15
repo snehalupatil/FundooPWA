@@ -10,5 +10,16 @@
 
   <mat-icon>archive</mat-icon>
 
-  <mat-icon>more_vert</mat-icon>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="deleteNote()">
+      <span>Delete note</span>
+    </button>
+  </mat-menu>
 </div>

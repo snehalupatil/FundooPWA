@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  
+  @Output() route= new EventEmitter();
  
 
-  constructor() {}
+  constructor(private router:Router) {}
 
   ngOnInit(): void {}
 
   logout(){}
+
+  trashClick(){
+    this.router.navigate(['trashNotes'])
+  }
 }

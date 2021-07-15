@@ -6,20 +6,24 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { UpdateComponent } from '../update/update.component';
 
 
+
 @Component({
   selector: 'app-displaynode',
   templateUrl: './displaynode.component.html',
   styleUrls: ['./displaynode.component.scss']
 })
 export class DisplaynodeComponent implements OnInit {
-  @Input() notes: any;
+  
   card: any;
-  
-  // changeText:boolean;
-  
+ 
   constructor( private noteService:NoteServiceService, public dialog: MatDialog) { 
-    // this.changeText=false
   }
+
+  @Input() notes: any;
+  @Input() type: string | undefined;
+
+  @Output() noteId = new EventEmitter<any>();
+  noteData:any
 
   ngOnInit(): void {
     console.log(this.notes)  
@@ -29,6 +33,17 @@ export class DisplaynodeComponent implements OnInit {
      this.card=card;
      const dialogRef = this.dialog.open(UpdateComponent, { 
       data: {note: card}
+     })
+   }
+  
+
+   getColor(isColor: any){
+     let data={
+       color: isColor,
+       noteIdList:[this.notes.id]
+     }
+     this.noteService.changeColor(data).subscribe((response:any) => {
+       console.log("Color changed Successfully",response);
      })
    }
 

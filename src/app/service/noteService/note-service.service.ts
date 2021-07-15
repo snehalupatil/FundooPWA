@@ -51,4 +51,20 @@ export class NoteServiceService {
       })
     );
   }
+
+  deleteNotes = (userData: any) => {
+    return this.httpService.post(`${this.url}notes/trashNotes`, userData, true)
+    .pipe(
+      tap(() => {
+        this.refresh.next();
+      })
+    );
+  }
+
+  getTrashNotes = () => {
+    return this.httpService.get(`${this.url}notes/getTrashNotesList`, true)
+  }
+  
+
+
   }

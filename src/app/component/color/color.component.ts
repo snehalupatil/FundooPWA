@@ -12,7 +12,7 @@ export class ColorComponent implements OnInit {
   
   isColor:string='';
 
-  constructor(private noteService: NoteServiceService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -21,16 +21,8 @@ export class ColorComponent implements OnInit {
 
   @Output() ItemEvent = new EventEmitter<string>();
 
-
-  getColor = (colorCode:string) => {
-    this.ItemEvent.emit(colorCode);
-    // this.color=color;
-  //   let data={
-  //     color :this.isColor,
-  // }
-  // this.noteService.changeColor(data).subscribe((data:any) => {
-  //   console.log("Color changed successfully", data);
-  // });
+  getColor(colorCode:string){
+    this.ItemEvent.emit(colorCode);  
 }
 
 //Trash--
