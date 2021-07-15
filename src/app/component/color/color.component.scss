@@ -1,75 +1,32 @@
-@mixin color {
-  width: 25px;
-  height: 25px;
-  background-color: white;
-  margin-left: 10px;
-  border-radius: 50%;
-  margin-top: 5px;
-  border: 1px solid lightgray;
+span {
+  margin-left: 33px;
 }
 
-@mixin last-color {
-  @include color();
-  margin-right: 10px;
+.first-row {
+  display: flex;
 }
 
-.pallet-division {
-  .color-one {
-    @include color();
-  }
-
-  .color-two {
-    @include color();
-    background-color: #f28b82;
-  }
-
-  .color-three {
-    @include color();
-    background-color: #fbbc04;
-  }
-
-  .color-four {
-    @include last-color();
-    background-color: #fff475;
-  }
-
-  .color-five {
-    @include color();
-    background-color: #ccff90;
-  }
-
-  .color-six {
-    @include color();
-    background-color: #a7ffeb;
-  }
-
-  .color-seven {
-    @include color();
-    background-color: #cbf0f8;
-  }
-
-  .color-eight {
-    @include last-color();
-    background-color: #aecbfa;
-  }
-
-  .color-nine {
-    @include color();
-    background-color: #d7aefb;
-  }
-
-  .color-ten {
-    @include color();
-    background-color: #fdcfe8;
-  }
-
-  .color-eleven {
-    @include color();
-    background-color: #e6c9a8;
-  }
-
-  .color-twelve {
-    @include last-color();
-    background-color: #e8eaed;
-  }
+span:hover {
+  border: 2px solid black;
 }
+
+.color {
+  height: 20px;
+  width: 10px;
+}
+
+// .body {
+//   background-color: #ffff;
+//   height: 107px;
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+// }
+
+// div.circle {
+//   border-radius: 50px/50px;
+//   width: 0px;
+//   height: 0px;
+//   cursor: pointer;
+// }

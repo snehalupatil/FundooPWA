@@ -3,8 +3,9 @@
 
   <mat-icon>person_add</mat-icon>
 
-  <mat-icon>palette</mat-icon>
-  <app-color-panel></app-color-panel>
+  <!-- <mat-icon>palette</mat-icon> -->
+  <app-color class="child-color" (ItemEvent)="getcolor($event)"></app-color>
+
   <mat-icon> insert_photo</mat-icon>
 
   <mat-icon>archive</mat-icon>

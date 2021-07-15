@@ -43,4 +43,12 @@ export class NoteServiceService {
     );
   }
 
+  changeColor = (userData: any) => {
+    return this.httpService.post(`${this.url}notes/changesColorNotes`, userData, true)
+    .pipe(
+      tap(() => {
+        this.refresh.next();
+      })
+    );
+  }
   }
