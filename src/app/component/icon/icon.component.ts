@@ -1,6 +1,6 @@
 import { NoteServiceService } from './../../service/noteService/note-service.service';
-import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-icon',
@@ -13,13 +13,15 @@ export class IconComponent implements OnInit {
   constructor(private formBuilder:FormBuilder, private noteService: NoteServiceService) { }
 
   @Input() noteId:any;
+  @Output() ItemEvent1 = new EventEmitter<string>();
 
   ngOnInit(): void {
   }
 
-  getcolor($isColor:string){
+  getColor($isColor:string){
     console.log($isColor);
     this.isColor = $isColor;
+    this.ItemEvent1.emit(this.isColor)
   }
 
   deleteNote(){

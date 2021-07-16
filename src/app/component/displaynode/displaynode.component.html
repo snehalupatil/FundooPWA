@@ -1,5 +1,9 @@
 <div class="mar">
-  <mat-card class="main-card" *ngFor="let note of notes">
+  <mat-card
+    class="main-card"
+    *ngFor="let note of notes"
+    [style.background-color]="note.color"
+  >
     <div class="title-discription" (click)="openDialog(note)">
       <div>
         <div>
@@ -15,7 +19,7 @@
     </div>
 
     <div class="icons">
-      <app-icon [noteId]="note.id"></app-icon>
+      <app-icon (ItemEvent1)="getColor1($event)"></app-icon>
     </div>
   </mat-card>
 </div>

@@ -43,8 +43,8 @@ export class NoteServiceService {
     );
   }
 
-  changeColor = (userData: any) => {
-    return this.httpService.post(`${this.url}notes/changesColorNotes`, userData, true)
+  changeColor = (userData: any, token: any) => {
+    return this.httpService.post(`${this.url}notes/changesColorNotes`, userData, true, token)
     .pipe(
       tap(() => {
         this.refresh.next();
@@ -60,11 +60,5 @@ export class NoteServiceService {
       })
     );
   }
-
-  getTrashNotes = () => {
-    return this.httpService.get(`${this.url}notes/getTrashNotesList`, true)
-  }
-  
-
 
   }

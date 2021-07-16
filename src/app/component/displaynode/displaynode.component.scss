@@ -23,15 +23,8 @@
   visibility: visible;
 }
 
-.class:active,
-.class:focus,
-.class:hover .third-block {
-  opacity: 1;
-}
-
 .mar .mat-card {
   margin-left: 15px;
-  width: 200px;
 }
 .mar .mat-card:hover + .third-block {
   opacity: 1;

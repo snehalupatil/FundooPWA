@@ -127,8 +127,12 @@ button {
 }
 
 ::ng-deep .mat-menu-panel {
-  min-width: 300px !important;
-  min-height: 400px !important;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .noteDiv {

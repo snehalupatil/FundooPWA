@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
 // import { ColorComponent } from '../color/color.component';
@@ -9,7 +9,7 @@ import { NoteServiceService } from 'src/app/service/noteService/note-service.ser
   styleUrls: ['./createnote.component.scss'],
 })
 export class CreatenoteComponent implements OnInit {
-  isColor:string='';
+  
 
   constructor(private service: NoteServiceService) {}
 
@@ -21,10 +21,20 @@ export class CreatenoteComponent implements OnInit {
   })
 
   token_Id = localStorage.getItem('token');
+  
+  isColor:string='';
+  
 
-  getColor = (isColor:string) => {
-    console.log(isColor);
-    this.isColor=isColor;
+
+  getColor1 = ($isColor:string) => {
+    console.log($isColor);
+    this.isColor = $isColor;
+    // let data={
+    //   "color": this.isColor
+    // }
+    // this.service.changeColor(data, this.token_Id).subscribe((data) => {
+    //   console.log(data)
+    // })
   }
 
   onClose = () => {
@@ -35,9 +45,10 @@ export class CreatenoteComponent implements OnInit {
     }
     this.service.createNote(data, this.token_Id).subscribe((data: any) => {
       console.log("Created Successfully",data);
-      this.form.reset();
-      // get api= dat sharing=> child-parent 
+      this.form.reset(); 
+      
     });
+    // this.isColor=null;
     
   }
 
