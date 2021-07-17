@@ -61,4 +61,8 @@ export class NoteServiceService {
     );
   }
 
+  getTrashNotes = (token: any) => {
+    return this.httpService.get(`${this.url}notes/getTrashNotesList`, true, token)
+  }
+
   }

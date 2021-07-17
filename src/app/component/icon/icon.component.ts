@@ -9,8 +9,9 @@ import { FormBuilder } from '@angular/forms';
 })
 export class IconComponent implements OnInit {
   isColor:string='';
+  id: any;
 
-  constructor(private formBuilder:FormBuilder, private noteService: NoteServiceService) { }
+  constructor(private formBuilder:FormBuilder, private noteService: NoteServiceService ) { }
 
   @Input() noteId:any;
   @Output() ItemEvent1 = new EventEmitter<string>();
@@ -28,7 +29,6 @@ export class IconComponent implements OnInit {
 
   deleteNote(){
     console.log(this.noteId);
-    // this.noteId.emit(this.note);
     let data = {
       noteIdList:[this.noteId],
       isDeleted:true

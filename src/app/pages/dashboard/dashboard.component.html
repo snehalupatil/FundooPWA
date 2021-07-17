@@ -144,16 +144,12 @@
       class="sidebar__notes sidebar__notes-archieve"
       style="margin-bottom: 20px"
     >
-      <button>
+      <button (click)="archieveClick()">
         <mat-icon>archive</mat-icon>
       </button>
       <button>Archieve</button>
     </div>
-    <div
-      class="sidebar__notes sidebar__notes-delete"
-      (click)="delete()"
-      style="margin-bottom: 20px"
-    >
+    <div (click)="trashClick()">
       <button>
         <mat-icon>delete_outline</mat-icon>
       </button>

@@ -22,8 +22,12 @@ export class DashboardComponent implements OnInit {
   notesClicked(){
     this.router.navigate(["/dashboard"])
   }
+  archieveClick(){
+    console.log("hit");
+    this.router.navigate(['/dashboard/archieve'])
+  }
 
-  delete(){
-    this.router.navigate(["/trash"])
+  trashClick(){
+    this.router.navigate(['/dashboard/trash'])
   }
 }

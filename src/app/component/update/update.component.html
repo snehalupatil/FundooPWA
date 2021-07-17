@@ -1,15 +1,11 @@
-<mat-card class="active-add-note" [style.background-color]="isColor">
-  <form
-    [formGroup]="form"
-    (ngSubmit)="updateNote()"
-    [style.background-color]="isColor"
-  >
+<mat-card class="active-add-note" [style.background-color]="color">
+  <form [formGroup]="form" (ngSubmit)="updateNote()">
     <div fxLayout="row" class="active-input">
       <input
         type="text"
         placeholder="title"
         formControlName="title"
-        [style.background-color]="isColor"
+        [style.background-color]="color"
       />
     </div>
     <div fxLayout="row" class="note-input">
@@ -17,7 +13,7 @@
         type="text"
         placeholder="Take a note"
         formControlName="description"
-        [style.background-color]="isColor"
+        [style.background-color]="color"
       >
       </textarea>
     </div>

@@ -7,7 +7,7 @@ import { ForgotPasswardComponent } from './pages/forgot-passward/forgot-passward
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthenticationGuard } from './service/authguard/authentication.guard'
 import { TrashComponent } from './component/trash/trash.component';
-
+import { ArchiveComponent } from './component/archive/archive.component';
 
 
 const routes: Routes = [
@@ -17,7 +17,15 @@ const routes: Routes = [
   { path: 'resetpassword/:token', component: ForgotEmailComponent },
   { path: 'dashboard', component:DashboardComponent, canActivate:[ AuthenticationGuard ] },
   { path:  'trash', component:TrashComponent },
-  // { path: 'archive', }
+  {
+    path:'dashboard',
+    component:DashboardComponent,
+    canActivate:[AuthenticationGuard],children: [
+      { path:"",component: DashboardComponent },
+      { path:"archieve",component:ArchiveComponent},
+      {path:"trash",component:TrashComponent}
+    ]
+  },
   
 ];
 
