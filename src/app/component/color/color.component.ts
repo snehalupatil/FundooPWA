@@ -25,6 +25,8 @@ export class ColorComponent implements OnInit {
     this.ItemEvent.emit(colorCode);  
 }
 
+}
+
 //Trash--
 // let noteData = {
 //   noteIdList: [props.noteId],
@@ -37,4 +39,4 @@ export class ColorComponent implements OnInit {
 // this is for archieve
 
 
-}
+

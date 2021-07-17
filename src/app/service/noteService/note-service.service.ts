@@ -52,8 +52,8 @@ export class NoteServiceService {
     );
   }
 
-  deleteNotes = (userData: any) => {
-    return this.httpService.post(`${this.url}notes/trashNotes`, userData, true)
+  deleteNotes = (userData: any, token: any) => {
+    return this.httpService.post(`${this.url}notes/trashNotes`, userData, true, token)
     .pipe(
       tap(() => {
         this.refresh.next();

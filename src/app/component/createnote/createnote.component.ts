@@ -25,10 +25,9 @@ export class CreatenoteComponent implements OnInit {
   isColor:string='';
   
 
-
-  getColor1 = ($isColor:string) => {
-    console.log($isColor);
-    this.isColor = $isColor;
+  getColor1 = (isColor:string) => {
+    console.log(isColor);
+    this.isColor = isColor;
     // let data={
     //   "color": this.isColor
     // }
@@ -46,9 +45,8 @@ export class CreatenoteComponent implements OnInit {
     this.service.createNote(data, this.token_Id).subscribe((data: any) => {
       console.log("Created Successfully",data);
       this.form.reset(); 
-      
-    });
-    // this.isColor=null;
+      this.isColor="white";
+    }); 
     
   }
 

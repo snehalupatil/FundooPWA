@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'forgot-passward', component: ForgotPasswardComponent },
   { path: 'resetpassword/:token', component: ForgotEmailComponent },
   { path: 'dashboard', component:DashboardComponent, canActivate:[ AuthenticationGuard ] },
-  
+  { path:  'trash', component:TrashComponent },
+  // { path: 'archive', }
   
 ];
 

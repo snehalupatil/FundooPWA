@@ -20,10 +20,9 @@ export class DisplaynodeComponent implements OnInit {
   }
 
   @Input() notes: any;
-  @Input() type: string | undefined;
-
+  
   @Output() noteId = new EventEmitter<any>();
-  noteData:any
+  
   token_Id = localStorage.getItem('token');
 
   ngOnInit(): void {
@@ -39,10 +38,10 @@ export class DisplaynodeComponent implements OnInit {
   
 
    getColor1(isColor: any){
-     console.log(isColor)
+     console.log(isColor,this.notes)
      let data={
        color: isColor,
-       noteIdList:[this.notes.id]
+       noteIdList:[this.notes.id]  
      }
      this.noteService.changeColor(data,this.token_Id).subscribe((response:any) => {
        console.log("Color changed Successfully",response);

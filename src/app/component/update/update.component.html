@@ -1,18 +1,28 @@
-<mat-card class="active-add-note">
-  <form [formGroup]="form" (ngSubmit)="updateNote()">
+<mat-card class="active-add-note" [style.background-color]="isColor">
+  <form
+    [formGroup]="form"
+    (ngSubmit)="updateNote()"
+    [style.background-color]="isColor"
+  >
     <div fxLayout="row" class="active-input">
-      <input type="text" placeholder="title" formControlName="title" />
+      <input
+        type="text"
+        placeholder="title"
+        formControlName="title"
+        [style.background-color]="isColor"
+      />
     </div>
     <div fxLayout="row" class="note-input">
       <textarea
         type="text"
         placeholder="Take a note"
         formControlName="description"
+        [style.background-color]="isColor"
       >
       </textarea>
     </div>
     <div fxLayout="row" fxLayoutAlign="space-between center" class="icons">
-      <app-icon style="width: 60%"></app-icon>
+      <app-icon (ItemEvent1)="getColor2($event)" style="width: 60%"></app-icon>
       <button mat-raised-button class="close-button">Close</button>
     </div>
   </form>

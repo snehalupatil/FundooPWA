@@ -18,7 +18,12 @@ export class DashboardComponent implements OnInit {
 
   logout(){}
 
-  trashClick(){
-    this.router.navigate(['trashNotes'])
+ 
+  notesClicked(){
+    this.router.navigate(["/dashboard"])
+  }
+
+  delete(){
+    this.router.navigate(["/trash"])
   }
 }

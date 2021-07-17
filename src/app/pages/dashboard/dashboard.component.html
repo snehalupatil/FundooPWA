@@ -124,7 +124,9 @@
       <button>
         <mat-icon>lightbulb</mat-icon>
       </button>
-      <button style="width: 35px; height: 35px">Notes</button>
+      <button style="width: 35px; height: 35px" (click)="notesClicked()">
+        Notes
+      </button>
     </div>
     <div class="sidebar__notes sidebar__notes-bell" style="margin-bottom: 20px">
       <button>
@@ -149,7 +151,7 @@
     </div>
     <div
       class="sidebar__notes sidebar__notes-delete"
-      (click)="trashClick()"
+      (click)="delete()"
       style="margin-bottom: 20px"
     >
       <button>
@@ -160,7 +162,7 @@
   </mat-drawer>
   <div style="background-color: rgb(255, 255, 255)">
     <div class="noteDiv">
-      <app-note></app-note>
+      <app-note style="height: 30%"></app-note>
     </div>
   </div>
 </mat-drawer-container>
