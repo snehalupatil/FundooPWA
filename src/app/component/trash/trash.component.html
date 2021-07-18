@@ -1,26 +1,22 @@
-<!-- <app-icon [notes]="notes"></app-icon>
-<div class="display">
-  <h1>Trash comes here</h1>
-</div> -->
 <mat-card
   class="main-card"
-  *ngFor="let card of notes; index as index"
-  [style.background-color]="card.color"
+  *ngFor="let note of notes"
+  [style.background-color]="note.color"
 >
   <div class="title-discription">
     <div fxLayout="row">
       <div fxFlex="20">
-        <p class="wordBreakTitle">{{ card.title }}</p>
+        <p class="wordBreakTitle">{{ note.title }}</p>
       </div>
     </div>
 
     <div class="descriptionbox">
-      <p class="wordBreak">{{ card.description }}</p>
+      <p class="wordBreak">{{ note.description }}</p>
     </div>
   </div>
   <mat-card-actions class="third-block">
     <div>
-      <app-icon [noteId]="card.id"></app-icon>
+      <app-icon [noteId]="note.id"></app-icon>
     </div>
   </mat-card-actions>
 </mat-card>

@@ -17,15 +17,15 @@ const routes: Routes = [
   { path: 'resetpassword/:token', component: ForgotEmailComponent },
   { path: 'dashboard', component:DashboardComponent, canActivate:[ AuthenticationGuard ] },
   { path:  'trash', component:TrashComponent },
-  {
-    path:'dashboard',
-    component:DashboardComponent,
-    canActivate:[AuthenticationGuard],children: [
-      { path:"",component: DashboardComponent },
-      { path:"archieve",component:ArchiveComponent},
-      {path:"trash",component:TrashComponent}
-    ]
-  },
+  // {
+  //   path:'dashboard',
+  //   component:DashboardComponent,
+  //   canActivate:[AuthenticationGuard],children: [
+  //     { path:"",component: DashboardComponent },
+  //     { path:"archieve",component:ArchiveComponent},
+  //     {path:"trash",component:TrashComponent}
+  //   ]
+  // },
   
 ];
 

@@ -13,6 +13,16 @@ export class CreatenoteComponent implements OnInit {
 
   constructor(private service: NoteServiceService) {}
 
+  step = 0;
+
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++
+  }
+  
   ngOnInit(): void {}
 
   form = new FormGroup({

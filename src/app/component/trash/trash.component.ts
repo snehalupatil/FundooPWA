@@ -14,22 +14,39 @@ export class TrashComponent implements OnInit {
   AllNotes=[];
   
   token_Id = localStorage.getItem('token');
- 
-  constructor( private noteService:NoteServiceService ) { 
-    this.trashNote=this.noteService.getTrashNotes(this.token_Id).subscribe((response:any)=>{
-        this.trashNote=response['data'].data
-        this.notes=this.trashNote.filter((note:any)=>{
-        
-            return note.isDeleted==true
-          })
-          console.log(this.notes);
-      })
-   }
+ //----------------
+ constructor( private noteService:NoteServiceService ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.getAllTrash();
+    this.noteService.getRefreshedData().subscribe(() => this.getAllTrash());  
+  }
+
+   getAllTrash(){
+    this.trashNote=this.noteService.getTrashNotes( this.token_Id).subscribe((data:any)=>{
+      console.log(data['data'].data);
+      this.trashNote=data['data'].data.reverse()
+      this.notes=this.trashNote.filter((note:any)=>{
+       return note.isDeleted==true
+       })  
+       console.log(this.notes);
+    })
     
   }
+}
+// ----------------
+  
+  // constructor( private noteService:NoteServiceService ) { 
+  //   this.trashNote=this.noteService.getTrashNotes(this.token_Id).subscribe((response:any)=>{
+  //       this.trashNote=response['data'].data
+  //       this.notes=this.trashNote.filter((note:any)=>{
+  //           return note.isDeleted==true
+  //         })
+  //         console.log(this.notes);
+  //     })
+  //  }
+
+  // ngOnInit(): void { }
   
 
-}
 

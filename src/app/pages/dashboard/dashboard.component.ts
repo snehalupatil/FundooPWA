@@ -23,11 +23,10 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(["/dashboard"])
   }
   archieveClick(){
-    console.log("hit");
-    this.router.navigate(['/dashboard/archieve'])
+    this.router.navigate(['/archieve'])
   }
 
   trashClick(){
-    this.router.navigate(['/dashboard/trash'])
+    this.router.navigate(['/trash'])
   }
 }

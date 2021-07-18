@@ -1,10 +1,17 @@
 <div class="mar">
   <mat-card
     class="main-card"
-    *ngFor="let note of notes"
+    *ngFor="let note of notes; index as index"
     [style.background-color]="note.color"
+    (mouseenter)="check(index)"
+    (mouseleave)="fun()"
+    [id]="index"
   >
-    <div class="title-discription" (click)="openDialog(note)">
+    <div
+      class="title-discription"
+      (click)="openDialog(note)"
+      (mouseenter)="getNote(note)"
+    >
       <div>
         <div>
           <h2 class="wordBreakTitle">
@@ -13,13 +20,21 @@
         </div>
       </div>
 
-      <div class="descriptionbox" (click)="openDialog(note)">
+      <div
+        class="descriptionbox"
+        (click)="openDialog(note)"
+        (mouseenter)="getNote(note)"
+      >
         <h3 class="wordBreak">{{ note.description }}</h3>
       </div>
     </div>
 
-    <div class="icons">
-      <app-icon (ItemEvent1)="getColor1($event)"></app-icon>
+    <div
+      class="icons"
+      [style.opacity]="index1 !== index ? '0' : '1'"
+      (mouseenter)="check(index)"
+    >
+      <app-icon (ItemEvent1)="getColor1($event)" [noteId]="card.id"></app-icon>
     </div>
   </mat-card>
 </div>
