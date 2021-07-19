@@ -10,7 +10,6 @@
 .icon-flex {
   display: flex;
   width: 20px;
-
   justify-content: space-around;
 }
 
@@ -26,9 +25,6 @@
 .mar .mat-card {
   margin-left: 15px;
 }
-.mar .mat-card:hover + .third-block {
-  opacity: 1;
-}
 
 ::ng-deep .mat-standard-chip.mat-chip-with-trailing-icon {
   padding-top: 20px;
@@ -38,16 +34,11 @@
 }
 
 .display {
-  /* border: 1px solid black;*/
   display: flex;
 }
 
 ::ng-deep .mat-card {
   margin-top: 20px;
-}
-
-.main-card:hover .div {
-  visibility: visible;
 }
 
 .flexcontainer {

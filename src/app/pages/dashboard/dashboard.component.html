@@ -113,7 +113,7 @@
     </div>
   </div>
 </div>
-
+<!-- *ngIf="evaluateRoute()" -->
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
     <div
@@ -141,10 +141,11 @@
       <button>Edit Labels</button>
     </div>
     <div
+      (click)="archieveClick()"
       class="sidebar__notes sidebar__notes-archieve"
       style="margin-bottom: 20px"
     >
-      <button (click)="archieveClick()">
+      <button>
         <mat-icon>archive</mat-icon>
       </button>
       <button>Archieve</button>
@@ -156,11 +157,11 @@
       <button>Trash</button>
     </div>
   </mat-drawer>
-  <div style="background-color: rgb(255, 255, 255)">
+  <div style="background-color: rgb(255, 255, 255)" [ngSwitch]="switchClick">
     <div class="noteDiv">
-      <app-note style="height: 30%"></app-note>
-      <app-trash style="height: 30%"></app-trash>
-      <app-archive style="height: 30%"></app-archive>
+      <app-note *ngSwitchCase="1" style="height: 30%"></app-note>
+      <app-trash *ngSwitchCase="2" style="height: 30%"></app-trash>
+      <app-archive *ngSwitchCase="3" style="height: 30%"></app-archive>
     </div>
   </div>
 </mat-drawer-container>

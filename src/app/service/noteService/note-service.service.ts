@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpServiceService } from '../httpService/http-service.service';
-import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
-import { Observable, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 
 @Injectable({
@@ -63,6 +62,21 @@ export class NoteServiceService {
 
   getTrashNotes = (token: any) => {
     return this.httpService.get(`${this.url}notes/getTrashNotesList`, true, token)
+  }
+
+  
+  archieveNote = (userData: any, token: any) => {
+    return this.httpService.post(`${this.url}notes/archiveNotes`, userData, true, token)
+    .pipe(
+      tap(() => {
+        this.refresh.next();
+      })
+    );
+  }
+
+  getAllArchieve = ( token: any) => {
+    return this.httpService.post(`${this.url}notes/getArchiveNotesList`,true, token)
+    
   }
 
   }

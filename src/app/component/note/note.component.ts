@@ -10,6 +10,7 @@ export class NoteComponent implements OnInit {
 
   constructor( private service: NoteServiceService ) { }
   notes = [].reverse();
+  note=[]
  
   token_Id = localStorage.getItem('token');
 
@@ -21,9 +22,16 @@ export class NoteComponent implements OnInit {
    getAllNotes(){
     this.service.getNotes( this.token_Id).subscribe((data:any)=>{
       console.log(data['data'].data);
-      this.notes=data['data'].data.reverse()  
+      this.notes = data['data'].data.reverse() 
+      this.notes = this.notes.filter((note:any) => {
+        return note.isDeleted == false
+      })
+      // .filter((note) => !note.isArchieved)
+      console.log("Filter Array");
     })
-    
+    console.log("Printing the Note")
+    console.log(this.notes)
+    //filter-isdeleted false isarchieve false
   }
 
 }

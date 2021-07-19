@@ -8,25 +8,40 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  
-  @Output() route= new EventEmitter();
- 
-
   constructor(private router:Router) {}
 
   ngOnInit(): void {}
 
   logout(){}
 
- 
+
+  // evaluateRoute(){
+    
+  //   switch(){
+  //     case "notesClicked()":
+  //       return this.router.navigate(["/dashboard"])
+  //     break;
+  //     case "archieveClick()":
+  //       return this.router.navigate(['/archieve'])
+  //       break;
+  //     case "trashClick()":
+  //       return this.router.navigate(['/trash'])
+  //       break;
+  //   }
+  // }
+
+  switchClick = 1
+
   notesClicked(){
-    this.router.navigate(["/dashboard"])
-  }
-  archieveClick(){
-    this.router.navigate(['/archieve'])
+    return this.switchClick = 1;
   }
 
   trashClick(){
-    this.router.navigate(['/trash'])
+    return this.switchClick = 2;
   }
+
+  archieveClick(){
+    return this.switchClick = 3;
+  }
+
 }

@@ -37,5 +37,16 @@ export class IconComponent implements OnInit {
       console.log("Deleted Successfully");
     });
   }
+
+  archieveNote(){
+    console.log(this.noteId);
+    let data = {
+      noteIdList:[this.noteId],
+      isArchived:true
+    }
+    this.noteService.archieveNote(data, this.token_Id).subscribe((response:any)=>{
+      console.log("Archieved Successfully");
+    });
+  }
   
 }
