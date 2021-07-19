@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
   //       return this.router.navigate(['/archieve'])
   //       break;
   //     case "trashClick()":
-  //       return this.router.navigate(['/trash'])
+  //       return this.router.navigate(['/dashboard/trash'])
   //       break;
   //   }
   // }

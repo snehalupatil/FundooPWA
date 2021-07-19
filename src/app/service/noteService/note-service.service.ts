@@ -61,7 +61,7 @@ export class NoteServiceService {
   }
 
   getTrashNotes = (token: any) => {
-    return this.httpService.get(`${this.url}notes/getTrashNotesList`, true, token)
+    return this.httpService.get(`${this.url}notes/getArchiveNotesList`, true, token)
   }
 
   
@@ -75,7 +75,7 @@ export class NoteServiceService {
   }
 
   getAllArchieve = ( token: any) => {
-    return this.httpService.post(`${this.url}notes/getArchiveNotesList`,true, token)
+    return this.httpService.get(`${this.url}notes/getArchiveNotesList`,true, token)
     
   }
 

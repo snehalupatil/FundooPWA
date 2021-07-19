@@ -1,22 +1,24 @@
-<mat-card
-  class="main-card"
-  *ngFor="let note of notes"
-  [style.background-color]="note.color"
->
-  <div class="title-discription">
-    <div fxLayout="row">
-      <div fxFlex="20">
-        <h2 class="wordBreakTitle">{{ note.title }}</h2>
+<div class="container">
+  <mat-card
+    class="main-card"
+    *ngFor="let note of notes"
+    [style.background-color]="note.color"
+  >
+    <div class="title-discription">
+      <div fxLayout="row">
+        <div fxFlex="20">
+          <h2 class="wordBreakTitle">{{ note.title }}</h2>
+        </div>
+      </div>
+
+      <div class="descriptionbox">
+        <h3 class="wordBreak">{{ note.description }}</h3>
       </div>
     </div>
-
-    <div class="descriptionbox">
-      <h3 class="wordBreak">{{ note.description }}</h3>
-    </div>
-  </div>
-  <mat-card-actions class="third-block">
-    <div>
-      <app-icon [noteId]="note.id"></app-icon>
-    </div>
-  </mat-card-actions>
-</mat-card>
+    <mat-card-actions class="third-block">
+      <div>
+        <app-icon></app-icon>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

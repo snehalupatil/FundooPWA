@@ -26,12 +26,11 @@ export class NoteComponent implements OnInit {
       this.notes = this.notes.filter((note:any) => {
         return note.isDeleted == false
       })
-      // .filter((note) => !note.isArchieved)
-      console.log("Filter Array");
-    })
-    console.log("Printing the Note")
-    console.log(this.notes)
-    //filter-isdeleted false isarchieve false
+      this.notes = this.notes.filter((note:any) => {
+        return note.isDeleted == false
+      })
+      });
+    
   }
-
+  
 }

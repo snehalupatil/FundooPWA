@@ -24,13 +24,9 @@ export class TrashComponent implements OnInit {
   }
 
    getAllTrash = () => {
+     console.log("Trash Notes")
     this.trashNote=this.noteService.getTrashNotes( this.token_Id).subscribe((data:any)=>{
-      console.log(data['data'].data);
-      this.trashNote=data['data'].data.reverse()
-      this.notes=this.trashNote.filter((note:any)=>{
-       return note.isDeleted==true
-       })  
-       console.log(this.notes);
+      this.notes=data['data'].data.reverse()
     })
     
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NoteServiceService } from 'src/app/service/noteService/note-service.service';
 
 @Component({
@@ -7,11 +7,10 @@ import { NoteServiceService } from 'src/app/service/noteService/note-service.ser
   styleUrls: ['./archive.component.scss']
 })
 export class ArchiveComponent implements OnInit {
+  @Output() ItemEvent = new EventEmitter<string>();
  
   archieveNote:any=[];
   notes:any=[];
-  note=[];
-  AllNotes=[];
   
   token_Id = localStorage.getItem('token');
  
@@ -23,13 +22,10 @@ export class ArchiveComponent implements OnInit {
   }
 
    getAllArchieve(){
+     console.log("Archive Notes")
     this.archieveNote=this.noteService.getAllArchieve( this.token_Id).subscribe((data:any)=>{
       console.log(data['data'].data);
-      this.archieveNote=data['data'].data.reverse()
-      this.archieveNote=this.archieveNote.filter((note:any)=>{
-       return note.isArchieved == true
-       })  
-       console.log(this.notes);
+      this.notes=data['data'].data.reverse()
     })
     
   }

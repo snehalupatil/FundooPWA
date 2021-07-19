@@ -19,6 +19,7 @@ const routes: Routes = [
   { path:  'trash', component:TrashComponent },
   { path:  'archieve', component:ArchiveComponent },
 
+  //child routing
 ];
 
 @NgModule({
