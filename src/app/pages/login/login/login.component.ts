@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserServiceService } from 'src/app/service/userService/user-service.service';
 import { Router } from '@angular/router';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,15 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private service: UserServiceService, private router: Router) { }
+  update: boolean = false
+
+  constructor(private service: UserServiceService, private router: Router, updates: SwUpdate) { 
+    updates.available.subscribe(event => {
+      // this.update = true;
+      updates.activateUpdate().then(() => document.location.reload());
+    })
+  }
+  
 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(3)]),

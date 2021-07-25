@@ -40,6 +40,8 @@ import { UpdateComponent } from './component/update/update.component';
 import { ColorComponent } from './component/color/color.component';
 import { TrashComponent } from './component/trash/trash.component';
 import { ArchiveComponent } from './component/archive/archive.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -86,7 +88,13 @@ import { ArchiveComponent } from './component/archive/archive.component';
     MatMenuModule,
     MatExpansionModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
     
   ],
   providers: [],
