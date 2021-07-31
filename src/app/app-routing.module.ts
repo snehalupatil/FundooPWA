@@ -11,6 +11,7 @@ import { ArchiveComponent } from './component/archive/archive.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path : 'registration', component : RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-passward', component: ForgotPasswardComponent },
